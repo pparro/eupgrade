@@ -170,7 +170,8 @@
 .search-row .sf select{width:100%;border:none;background:transparent;font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);padding:2px 0;outline:none;appearance:none;cursor:pointer}
 
 /* ── eupgrade.me rebrand + free-first repositioning ── */
-.brand .me{color:var(--muted);font-weight:700}
+.brand .word{letter-spacing:-.02em}
+.brand .me{color:var(--muted);font-weight:800}
 
 /* calm "coming soon" predictor band above the footer */
 .soon-band{background:linear-gradient(180deg,#eef1fa,transparent)}

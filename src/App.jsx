@@ -82,7 +82,7 @@ export default function App() {
   return (
     <>
       <nav><div className="wrap">
-        <div className="brand"><span className="glyph">&uarr;</span>eupgrade<span className="me">.me</span></div>
+        <div className="brand"><span className="glyph">&uarr;</span><span className="word">eupgrade<span className="me">.me</span></span></div>
         <div className="nav-links">
           <a href="#how">How it works</a>
           <a href="#calculator">Calculator</a>
