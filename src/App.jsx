@@ -5,6 +5,7 @@ import Calculator from "./components/Calculator.jsx";
 import Pricing from "./components/Pricing.jsx";
 import { AIRPORTS } from "./airports.js";
 import { TIERS } from "./rules.js";
+import { subscribeEmail } from "./notify.js";
 
 const AP_OPTIONS = AIRPORTS.map((a) => (
   <option key={a.code} value={a.code}>{a.code} · {a.city}</option>
@@ -22,14 +23,18 @@ function RotatingHeadline() {
   const [i, setI] = useState(0);
   const [show, setShow] = useState(true);
   useEffect(() => {
+    // Respect reduced-motion: hold a single headline, don't cycle.
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches) return;
+    let inner;
     const t = setInterval(() => {
       setShow(false);
-      setTimeout(() => {
+      inner = setTimeout(() => {
         setI((n) => (n + 1) % HEADLINES.length);
         setShow(true);
       }, 350);
     }, 3800);
-    return () => clearInterval(t);
+    return () => { clearInterval(t); clearTimeout(inner); };
   }, []);
   const [a, g, b] = HEADLINES[i];
   return (
@@ -43,30 +48,57 @@ function RotatingHeadline() {
 
 function NotifyForm() {
   const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
-  const submit = (e) => {
+  const [status, setStatus] = useState("idle"); // idle | submitting | done | error
+  const [error, setError] = useState("");
+
+  const submit = async (e) => {
     e.preventDefault();
-    if (!email.trim()) return;
-    setDone(true);
+    const value = email.trim();
+    if (!value || status === "submitting") return;
+    setStatus("submitting");
+    setError("");
+    try {
+      await subscribeEmail(value);
+      setStatus("done");
+    } catch (err) {
+      setStatus("error");
+      setError(
+        err.code === "not-configured"
+          ? "Sign-ups aren't open just yet — check back soon."
+          : "Something went wrong. Please try again."
+      );
+    }
   };
-  if (done) {
+
+  if (status === "done") {
     return (
-      <div className="notify-done">
+      <div className="notify-done" role="status">
         <span className="ok">&#10003;</span> Thanks — we'll email you when predictions go live.
       </div>
     );
   }
+
+  const busy = status === "submitting";
   return (
-    <form className="notify" onSubmit={submit}>
-      <input
-        type="email"
-        required
-        placeholder="you@email.com"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button type="submit">Notify me</button>
-    </form>
+    <>
+      <form className="notify" onSubmit={submit}>
+        <input
+          type="email"
+          required
+          autoComplete="email"
+          inputMode="email"
+          aria-label="Email address"
+          placeholder="you@email.com"
+          value={email}
+          disabled={busy}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button type="submit" disabled={busy || !email.trim()}>
+          {busy ? "Adding you…" : "Notify me"}
+        </button>
+      </form>
+      {status === "error" && <p className="notify-error" role="alert">{error}</p>}
+    </>
   );
 }
 
@@ -94,6 +126,7 @@ export default function App() {
         </div>
       </div></nav>
 
+      <main>
       <header><div className="wrap">
         <div className="pill rise d1"><span className="d"></span> A free eUpgrade tool for Aeroplan flyers</div>
         <RotatingHeadline />
@@ -102,13 +135,13 @@ export default function App() {
 
         <div className="search rise d3">
           <div className="search-row">
-            <div className="sf br"><div className="k">From</div>
-              <select value={trip.from} onChange={(e) => set("from", e.target.value)}>{AP_OPTIONS}</select></div>
-            <div className="sf br"><div className="k">To</div>
-              <select value={trip.to} onChange={(e) => set("to", e.target.value)}>{AP_OPTIONS}</select></div>
-            <div className="sf"><div className="k">Your status</div>
-              <select value={trip.status} onChange={(e) => set("status", e.target.value)}>
-                {TIERS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></div>
+            <label className="sf br"><div className="k">From</div>
+              <select aria-label="From airport" value={trip.from} onChange={(e) => set("from", e.target.value)}>{AP_OPTIONS}</select></label>
+            <label className="sf br"><div className="k">To</div>
+              <select aria-label="To airport" value={trip.to} onChange={(e) => set("to", e.target.value)}>{AP_OPTIONS}</select></label>
+            <label className="sf"><div className="k">Your status</div>
+              <select aria-label="Your Aeroplan status" value={trip.status} onChange={(e) => set("status", e.target.value)}>
+                {TIERS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
             <button className="go" onClick={scrollToCalc}>Check &rarr;</button>
           </div>
         </div>
@@ -154,6 +187,7 @@ export default function App() {
           <NotifyForm />
         </div>
       </div></section>
+      </main>
 
       <footer><div className="wrap">
         <div className="disc"><b style={{ color: "var(--ink-2)" }}>eupgrade<span style={{ color: "var(--muted)" }}>.me</span></b> is an independent tool and is not affiliated with, endorsed by, or sponsored by Air Canada or Aeroplan. "Air Canada", "Aeroplan" and "eUpgrade" are trademarks of their respective owners, referenced only to describe the program this tool helps you navigate. Likelihood estimates are just that — estimates. Always confirm details in the Air Canada app before travelling.</div>
