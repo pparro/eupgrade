@@ -153,3 +153,18 @@
   footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
   .disc{font-size:11.5px;color:var(--muted);max-width:62ch;line-height:1.6}
   .foot-links{display:flex;gap:20px;font-size:13px;color:var(--ink-2);font-weight:600;flex-wrap:wrap}
+
+/* ── route-based calculator + rotating hero additions ── */
+.hero-h1{font-weight:800;font-size:54px;line-height:1.02;letter-spacing:-.035em;margin:20px auto 16px;max-width:16ch;min-height:1.04em}
+@media(max-width:720px){.hero-h1{font-size:38px}}
+.hero-h1 .g{background:linear-gradient(120deg,var(--indigo),var(--sky));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.h-swap{display:inline-block;transition:opacity .35s ease, transform .35s ease}
+.h-swap.in{opacity:1;transform:translateY(0)}
+.h-swap.out{opacity:0;transform:translateY(-8px)}
+@media(prefers-reduced-motion:reduce){.h-swap{transition:none}}
+.h-swap.out{}
+/* segment summary box in the calculator */
+.segbox{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;color:var(--ink-2);font-weight:600;min-height:44px;display:flex;align-items:center}
+.segbox b{color:var(--ink);font-family:"JetBrains Mono",monospace;margin-right:2px}
+/* hero search now holds selects; make them read like the inputs did */
+.search-row .sf select{width:100%;border:none;background:transparent;font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);padding:2px 0;outline:none;appearance:none;cursor:pointer}

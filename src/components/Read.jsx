@@ -29,7 +29,7 @@ export default function Read({ iClass = 9 }) {
       <div className="read-facts">
         <div className="rf"><div className="k">Business avail</div><div className="v mono">I{iClass}</div></div>
         <div className="rf"><div className="k">Your read</div><div className="v mono">Y&rarr;J</div></div>
-        <div className="rf"><div className="k">Est. cost</div><div className="v">20 <small>cr</small></div></div>
+        <div className="rf"><div className="k">Est. cost</div><div className="v">20 <small>credits</small></div></div>
       </div>
       <div className="caveat">
         <span>&#8505;&#65038;</span>

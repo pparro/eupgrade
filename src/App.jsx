@@ -1,8 +1,56 @@
+import { useState, useEffect } from "react";
 import Read from "./components/Read.jsx";
 import Calculator from "./components/Calculator.jsx";
 import Pricing from "./components/Pricing.jsx";
+import { AIRPORTS } from "./airports.js";
+import { TIERS } from "./rules.js";
+
+const AP_OPTIONS = AIRPORTS.map((a) => (
+  <option key={a.code} value={a.code}>{a.code} · {a.city}</option>
+));
+
+const HEADLINES = [
+  ["Will your Air Canada", "upgrade ", "actually clear?"],
+  ["Stop letting your", "eUpgrades ", "go to waste."],
+  ["eUpgrades expiring?", "Spend them ", "where they count."],
+  ["Know before you book", "if that upgrade ", "will clear."],
+  ["Turn credits into", "front-cabin ", "seats."],
+];
+
+function RotatingHeadline() {
+  const [i, setI] = useState(0);
+  const [show, setShow] = useState(true);
+  useEffect(() => {
+    const t = setInterval(() => {
+      setShow(false);
+      setTimeout(() => {
+        setI((n) => (n + 1) % HEADLINES.length);
+        setShow(true);
+      }, 350);
+    }, 3800);
+    return () => clearInterval(t);
+  }, []);
+  const [a, g, b] = HEADLINES[i];
+  return (
+    <h1 className="hero-h1">
+      <span className={"h-swap " + (show ? "in" : "out")}>
+        {a}<br /><span className="g">{g}</span>{b}
+      </span>
+    </h1>
+  );
+}
 
 export default function App() {
+  const [trip, setTrip] = useState({
+    from: "YYZ", to: "NRT", status: "SUPER_ELITE",
+    cabin: "J", fare: "Y_FLEX", cls: "V", purchase: "CASH",
+  });
+  const set = (k, v) => setTrip((s) => ({ ...s, [k]: v }));
+
+  const scrollToCalc = () => {
+    document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <>
       <nav><div className="wrap">
@@ -17,16 +65,19 @@ export default function App() {
 
       <header><div className="wrap">
         <div className="pill rise d1"><span className="d"></span> For Aeroplan flyers who hate wasting credits</div>
-        <h1 className="rise d2">Will your Air Canada<br />upgrade <span className="g">actually clear?</span></h1>
+        <RotatingHeadline />
         <p className="lede rise d2">Check any flight and get a straight answer — what the upgrade costs, when your window opens, and how likely it is to clear based on live premium-cabin availability.</p>
 
         <div className="search rise d3">
           <div className="search-row">
-            <div className="sf br"><div className="k">Flight number</div><input placeholder="AC 001" defaultValue="AC 001" /></div>
-            <div className="sf br"><div className="k">Date</div><input placeholder="in 2 days" defaultValue="in 2 days" /></div>
-            <div className="sf"><div className="k">You're in</div>
-              <select defaultValue="Y"><option value="Y">Economy</option><option value="PY">Prem Econ</option></select></div>
-            <button className="go">Check &rarr;</button>
+            <div className="sf br"><div className="k">From</div>
+              <select value={trip.from} onChange={(e) => set("from", e.target.value)}>{AP_OPTIONS}</select></div>
+            <div className="sf br"><div className="k">To</div>
+              <select value={trip.to} onChange={(e) => set("to", e.target.value)}>{AP_OPTIONS}</select></div>
+            <div className="sf"><div className="k">Your status</div>
+              <select value={trip.status} onChange={(e) => set("status", e.target.value)}>
+                {TIERS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></div>
+            <button className="go" onClick={scrollToCalc}>Check &rarr;</button>
           </div>
         </div>
         <div className="helper rise d4">
@@ -51,7 +102,7 @@ export default function App() {
         </div>
       </div></section>
 
-      <section style={{ paddingTop: 8 }}><div className="wrap"><Calculator /></div></section>
+      <section style={{ paddingTop: 8 }}><div className="wrap"><Calculator trip={trip} setTrip={setTrip} /></div></section>
 
       <Pricing />
 
