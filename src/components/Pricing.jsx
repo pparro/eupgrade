@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Pricing() {
   const [annual, setAnnual] = useState(true);
   return (
-    <section id="pricing" style={{ background: "linear-gradient(180deg,transparent,#eef1fa)" }}>
+    <section id="pricing" style={{ background: "linear-gradient(180deg,transparent,var(--bg-2))" }}>
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">Pricing</div>
@@ -37,7 +37,7 @@ export default function Pricing() {
               <li><span className="c">&#10003;</span> <b>Window-opening alerts</b> the moment you're eligible</li>
               <li><span className="c">&#10003;</span> Best-value flights to spend credits on</li>
               <li><span className="c">&#10003;</span> Saved trips &amp; multi-segment planning</li>
-              <li><span className="c">&#10003;</span> Early access to clearance predictions</li>
+              <li><span className="c">&#10003;</span> Clearance predictions — <b>coming to Pro</b></li>
             </ul>
             <a className="btn primary" href="#pricing">Start 7-day free trial</a>
           </div>

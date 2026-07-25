@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "./components/Logo.jsx";
 import Calculator from "./components/Calculator.jsx";
 import Pricing from "./components/Pricing.jsx";
 import { AIRPORTS } from "./airports.js";
@@ -82,8 +84,9 @@ export default function App() {
   return (
     <>
       <nav><div className="wrap">
-        <div className="brand"><span className="glyph">&uarr;</span><span className="word">eupgrade<span className="me">.me</span></span></div>
+        <div className="brand"><Logo /><span className="word">eupgrade<span className="me">.me</span></span></div>
         <div className="nav-links">
+          <Link to="/guide">Guide</Link>
           <a href="#how">How it works</a>
           <a href="#calculator">Calculator</a>
           <a href="#pricing">Pricing</a>
@@ -95,6 +98,7 @@ export default function App() {
         <div className="pill rise d1"><span className="d"></span> A free eUpgrade tool for Aeroplan flyers</div>
         <RotatingHeadline />
         <p className="lede rise d2">Understand your eUpgrade instantly — free. Check any Air Canada flight and see exactly what the upgrade costs in credits, any cash add-on, and when your clearance window opens.</p>
+        <Link className="guide-link rise d2" to="/guide">New to eUpgrades? Start here &rarr;</Link>
 
         <div className="search rise d3">
           <div className="search-row">
