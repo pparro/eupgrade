@@ -71,9 +71,3 @@ export function windowInfo(t,z,f){const c=RULES.windows[t],lat=isLat(f);
     const d=c.lat[z];return{days:d,any:false,txt:`Non-status Latitude — window opens ${d} days out.`};}
   if(!c.non)return{days:null,any:false,txt:"No status: this fare brand can't be upgraded."};
   const d=c.non[z];return{days:d,any:false,txt:`Window opens ${d} days before departure.`};}
-export function readFromAvail(i){
-  if(i<=0)return{label:"Long shot",pt:.08,lo:.02,hi:.20,tone:""};
-  if(i<=2)return{label:"Unlikely",pt:.30,lo:.12,hi:.55,tone:""};
-  if(i<=5)return{label:"Coin flip",pt:.55,lo:.30,hi:.78,tone:""};
-  return{label:"Very likely",pt:.86,lo:.66,hi:.97,tone:"likely"};
-}

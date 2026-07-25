@@ -102,6 +102,7 @@ export default function Guide() {
         <a className="back" href="/#calculator">← Back to the calculator</a>
       </div></nav>
 
+      <main>
       <header><div className="gwrap">
         <div className="kicker">🎓 New here? Start with this.</div>
         <h1>Air Canada eUpgrades, <span className="g">explained simply</span></h1>
@@ -183,6 +184,7 @@ export default function Guide() {
           <a href="/#calculator">Check your flight →</a>
         </div>
       </div>
+      </main>
 
       <footer><div className="gwrap">
         <div className="disc"><b style={{ color: "var(--ink-2)" }}>eupgrade<span style={{ color: "var(--muted)" }}>.me</span></b> is an independent tool and is not affiliated with, endorsed by, or sponsored by Air Canada or Aeroplan. "Air Canada", "Aeroplan" and "eUpgrade" are trademarks of their respective owners, referenced here only to describe the program this guide explains. Details can change — always confirm in the Air Canada app.</div>

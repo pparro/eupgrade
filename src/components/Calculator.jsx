@@ -27,6 +27,7 @@ export default function Calculator({ trip, setTrip }) {
   );
 
   const A = airport(trip.from), B = airport(trip.to);
+  const sameAirport = trip.from === trip.to;
 
   return (
     <div className="board" id="calculator">
@@ -67,8 +68,10 @@ export default function Calculator({ trip, setTrip }) {
           </div>
         </div>
 
-        <div className="result">
-          {!res ? (
+        <div className="result" aria-live="polite">
+          {sameAirport ? (
+            <div className="ineligible">Origin and destination are the same — choose two different airports to see the cost.</div>
+          ) : !res ? (
             <div className="ineligible">Pick your origin and destination to see the cost.</div>
           ) : !res.ok ? (
             <div className="ineligible">{res.why}</div>
@@ -76,11 +79,11 @@ export default function Calculator({ trip, setTrip }) {
             <>
               <div className="figures">
                 <div className="fig"><div className="k">eUpgrade credits</div>
-                  <div className="v indigo">{res.credits}</div></div>
+                  <div className="v accent">{res.credits}</div></div>
                 <div className="fig"><div className="k">Cash add-on</div>
                   {res.addon > 0
                     ? <div className="v">{res.isMin ? "from " : ""}${res.addon}<small> CAD</small></div>
-                    : <div className="v mint">$0</div>}
+                    : <div className="v accent">$0</div>}
                   {res.waived && <span className="badge">Super Elite — add-on waived</span>}
                 </div>
               </div>
