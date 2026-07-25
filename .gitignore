@@ -4,3 +4,6 @@ dist
 .env.local
 .DS_Store
 .vercel
+
+# Local tooling & settings (impeccable skill, machine-specific config)
+.claude/
