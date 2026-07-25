@@ -88,13 +88,6 @@ export default function Calculator({ trip, setTrip }) {
               <div className="note"><span>&#9873;</span><div>
                 <b>{win.txt}</b> Anything inside 36 hours of departure is waitlisted regardless of open seats, and settled at the gate once check-in closes.
               </div></div>
-              <div className="locked">
-                <div className="lk">&#128200;</div>
-                <div>
-                  <div className="h">Clearance likelihood <span className="soon">Early access</span></div>
-                  <div className="s">Estimated from live premium-cabin availability for your specific flight. Rolling out to flyers now.</div>
-                </div>
-              </div>
             </>
           )}
         </div>

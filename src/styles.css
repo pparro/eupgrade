@@ -168,3 +168,17 @@
 .segbox b{color:var(--ink);font-family:"JetBrains Mono",monospace;margin-right:2px}
 /* hero search now holds selects; make them read like the inputs did */
 .search-row .sf select{width:100%;border:none;background:transparent;font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);padding:2px 0;outline:none;appearance:none;cursor:pointer}
+
+/* ── eupgrade.me rebrand + free-first repositioning ── */
+.brand .me{color:var(--muted);font-weight:700}
+
+/* calm "coming soon" predictor band above the footer */
+.soon-band{background:linear-gradient(180deg,#eef1fa,transparent)}
+.soon-inner{max-width:600px;margin:0 auto;text-align:center}
+.soon-inner h2{font-weight:800;font-size:28px;letter-spacing:-.02em;margin:10px 0 8px}
+@media(max-width:720px){.soon-inner h2{font-size:24px}}
+.soon-inner p{color:var(--ink-2);font-size:16px;margin:0 auto 22px;max-width:52ch}
+.notify{display:flex;gap:8px;max-width:420px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow)}
+.notify input{flex:1;min-width:0;border:none;background:transparent;font-family:inherit;font-size:15px;font-weight:600;color:var(--ink);padding:8px 10px;outline:none}
+.notify button{border:none;background:var(--indigo);color:#fff;border-radius:10px;padding:10px 18px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(91,75,232,.6)}
+.notify-done{font-size:15px;font-weight:600;color:var(--ink-2);display:inline-flex;align-items:center;gap:8px;justify-content:center}

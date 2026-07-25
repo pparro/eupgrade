@@ -7,8 +7,8 @@ export default function Pricing() {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">Pricing</div>
-          <h2>Free to check. Pro to plan ahead.</h2>
-          <p>Check any flight departing in the next 3 days for free — see the tool work on real availability. Pro unlocks every future date, plus the tools that keep your credits from expiring.</p>
+          <h2>Free to use. Pro if you plan ahead.</h2>
+          <p>The calculator is free for every route, fare and status — no sign-up. Pro is optional: it keeps your credits from expiring and tells you the moment you can request.</p>
         </div>
         <div style={{ textAlign: "center" }}>
           <div className="toggle">
@@ -21,9 +21,9 @@ export default function Pricing() {
             <h3>Free</h3><div className="price">$0</div><div className="cy">Always.</div>
             <ul>
               <li><span className="c">&#10003;</span> Full cost &amp; add-on calculator</li>
-              <li><span className="c">&#10003;</span> Clearance window + 36-hour wall</li>
-              <li><span className="c">&#10003;</span> Likelihood read for flights within 3 days</li>
+              <li><span className="c">&#10003;</span> Clearance window + 36-hour cutoff</li>
               <li><span className="c">&#10003;</span> Every route, fare &amp; status tier</li>
+              <li><span className="c">&#10003;</span> No sign-up, no limits</li>
             </ul>
             <a className="btn ghost" href="#calculator">Check a flight</a>
           </div>
@@ -33,11 +33,11 @@ export default function Pricing() {
             <div className="price">{annual ? "$4.17" : "$4.99"}<small>/mo</small></div>
             <div className="cy">{annual ? "$49.99 billed yearly" : "billed monthly · cancel anytime"}</div>
             <ul>
-              <li><span className="c">&#10003;</span> Likelihood reads for <b>any future date</b></li>
               <li><span className="c">&#10003;</span> <b>Credit-expiry tracker</b> — never lose a credit</li>
               <li><span className="c">&#10003;</span> <b>Window-opening alerts</b> the moment you're eligible</li>
               <li><span className="c">&#10003;</span> Best-value flights to spend credits on</li>
               <li><span className="c">&#10003;</span> Saved trips &amp; multi-segment planning</li>
+              <li><span className="c">&#10003;</span> Early access to clearance predictions</li>
             </ul>
             <a className="btn primary" href="#pricing">Start 7-day free trial</a>
           </div>
