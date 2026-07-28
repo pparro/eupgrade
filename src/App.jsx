@@ -119,6 +119,7 @@ export default function App() {
         <div className="brand"><Logo /><span className="word">eupgrade<span className="me">.me</span></span></div>
         <div className="nav-links">
           <Link to="/guide">Guide</Link>
+          <Link to="/faq">FAQ</Link>
           <a href="#how">How it works</a>
           <a href="#calculator">Calculator</a>
           <a href="#pricing">Pricing</a>
@@ -176,6 +177,9 @@ export default function App() {
           <div><div className="q">Is this affiliated with Air Canada?</div><div className="a">No — it's an independent tool built by a frequent flyer. Costs come from Air Canada's published charts. Always confirm in the AC app before you travel.</div></div>
           <div><div className="q">Is it really free?</div><div className="a">Yes. The calculator is free for any route, fare and status, with no sign-up. Pro is optional and only adds planning tools on top.</div></div>
           <div><div className="q">What does Pro add?</div><div className="a">It tracks your credit balance and expiry, alerts you the moment a flight's request window opens, and points you at the best-value flights to burn credits on before they reset.</div></div>
+        </div>
+        <div style={{ textAlign: "center", marginTop: 26 }}>
+          <Link className="guide-link" to="/faq">See all eUpgrade questions &amp; answers &rarr;</Link>
         </div>
       </div></section>
 
