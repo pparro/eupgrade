@@ -1,10 +1,10 @@
 /* eupgrade — global styles */
 :root{
-    --bg:#F6F5F2; --bg-2:#EDEBE5; --card:#FFFFFF;
-    --slate:#2E3538; --slate-2:#4A5457;
-    --ink:#242B2E; --ink-2:#565F62; --muted:#68706F; --line:#E4E1D9;
+    --bg:#F8F4EF; --bg-2:#EDEBE5; --card:#FFFFFF;
+    --slate:#332C27; --slate-2:#4A5457;
+    --ink:#332C27; --ink-2:#6B5F53; --muted:#9A8D7E; --line:#E9DFD2;
     --green:#0C9A6C; --green-deep:#097A54; --green-deeper:#075B3B; --green-bg:#E3F6EE;
-    --bronze:#A97A4B; --bronze-deep:#8C6238; --bronze-bg:#F3E9DC;
+    --copper:#B5652F; --copper-deep:#8F4B20; --copper-bg:#F7E7D9;
     --rose:#F0637E; --rose-deep:#C23A58; --rose-bg:#FDEDF0; --rose-line:#F6D3DB;
     --r:20px; --shadow:0 18px 40px -22px rgba(40,42,38,.20);
   }
@@ -62,7 +62,7 @@
   .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
   @media(max-width:820px){.cards3{grid-template-columns:1fr}}
   .c3{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
-  .c3 .ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-size:20px;margin-bottom:14px;background:linear-gradient(135deg,var(--green-bg),var(--bronze-bg));color:var(--green)}
+  .c3 .ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-size:20px;margin-bottom:14px;background:linear-gradient(135deg,var(--green-bg),var(--copper-bg));color:var(--green)}
   .c3 h3{font-weight:700;font-size:18px;margin:0 0 6px}
   .c3 p{color:var(--muted);font-size:14px;margin:0}
 
@@ -193,7 +193,7 @@
 .prose p b,.prose li b{color:var(--ink);font-weight:700}
 .prose strong{color:var(--ink)}
 
-.analogy{background:linear-gradient(120deg,var(--green-bg),var(--bronze-bg));border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:8px 0 4px;font-size:16px;color:var(--ink-2)}
+.analogy{background:linear-gradient(120deg,var(--green-bg),var(--copper-bg));border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:8px 0 4px;font-size:16px;color:var(--ink-2)}
 .analogy .tag{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-deep);font-weight:700;display:block;margin-bottom:6px}
 .analogy b{color:var(--ink)}
 .fine{font-size:14px!important;color:var(--muted)!important;margin-top:-6px!important}

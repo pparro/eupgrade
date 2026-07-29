@@ -1,20 +1,20 @@
 # eupgrade.me — Design System
 
 ## Palette
---bg: #F6F5F2       (warm stone-white base)
+--bg: #F8F4EF       (warm stone base)
 --bg-2: #EDEBE5
---slate: #2E3538    (structure, headings, body text)
+--slate: #332C27    (structure, headings, body text)
 --slate-2: #4A5457
---ink-2: #565F62
---muted: #68706F    (secondary text — darkened from #8A9194 to meet WCAG AA)
---line: #E4E1D9
+--ink-2: #6B5F53    (secondary text)
+--muted: #9A8D7E    (tertiary text / hints)
+--line: #E9DFD2
 --green: #0C9A6C    (hero accent / large display — the "cleared" color)
 --green-deep: #097A54   (accent TEXT + solid-fill buttons — AA-safe on white & green-bg)
 --green-deeper: #075B3B (deep gradient stop, e.g. the guide CTA block)
 --green-bg: #E3F6EE
---bronze: #A97A4B   (secondary premium accent, used sparingly)
---bronze-deep: #8C6238
---bronze-bg: #F3E9DC
+--copper: #B5652F   (secondary premium accent, used sparingly)
+--copper-deep: #8F4B20
+--copper-bg: #F7E7D9
 
 --rose: #F0637E     (state accent — the "waitlist / can't-clear / cutoff" signal)
 --rose-deep: #C23A58 (rose TEXT — AA-safe on light + rose-bg)
