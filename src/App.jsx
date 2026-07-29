@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./components/Logo.jsx";
 import Calculator from "./components/Calculator.jsx";
@@ -10,41 +10,6 @@ import { subscribeEmail } from "./notify.js";
 const AP_OPTIONS = AIRPORTS.map((a) => (
   <option key={a.code} value={a.code}>{a.code} · {a.city}</option>
 ));
-
-const HEADLINES = [
-  ["Will your Air Canada", "upgrade ", "actually clear?"],
-  ["Stop letting your", "eUpgrades ", "go to waste."],
-  ["eUpgrades expiring?", "Spend them ", "where they count."],
-  ["Know before you book", "if that upgrade ", "will clear."],
-  ["Turn credits into", "front-cabin ", "seats."],
-];
-
-function RotatingHeadline() {
-  const [i, setI] = useState(0);
-  const [show, setShow] = useState(true);
-  useEffect(() => {
-    // Respect reduced-motion: hold a single headline, don't cycle.
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) return;
-    let inner;
-    const t = setInterval(() => {
-      setShow(false);
-      inner = setTimeout(() => {
-        setI((n) => (n + 1) % HEADLINES.length);
-        setShow(true);
-      }, 350);
-    }, 3800);
-    return () => { clearInterval(t); clearTimeout(inner); };
-  }, []);
-  const [a, g, b] = HEADLINES[i];
-  return (
-    <h1 className="hero-h1">
-      <span className={"h-swap " + (show ? "in" : "out")}>
-        {a}<br /><span className="g">{g}</span>{b}
-      </span>
-    </h1>
-  );
-}
 
 function NotifyForm() {
   const [email, setEmail] = useState("");
@@ -130,9 +95,8 @@ export default function App() {
       <main>
       <header><div className="wrap">
         <div className="pill rise d1"><span className="d"></span> A free eUpgrade tool for Aeroplan flyers</div>
-        <RotatingHeadline />
-        <p className="lede rise d2">Understand your eUpgrade instantly — free. Check any Air Canada flight and see exactly what the upgrade costs in credits, any cash add-on, and when your clearance window opens.</p>
-        <Link className="guide-link rise d2" to="/guide">New to eUpgrades? Start here &rarr;</Link>
+        <h1 className="hero-h1 rise d2">Stop letting your Air Canada <span className="g">eUpgrades</span> go to waste.</h1>
+        <p className="lede rise d2">Free tool for using your Air Canada eUpgrades — see what an upgrade costs, when it can clear, and the best flights to spend your credits on before they expire.</p>
 
         <div className="search rise d3">
           <div className="search-row">
@@ -153,16 +117,42 @@ export default function App() {
         </div>
       </div></header>
 
+      <section id="triage"><div className="wrap">
+        <div className="sec-head">
+          <div className="eyebrow">Which one's you?</div>
+        </div>
+        <div className="cards3">
+          <div className="c3">
+            <div className="ic">&#127381;</div>
+            <h3>New to Air Canada status?</h3>
+            <p>If you just got Aeroplan status — from a card, a status match, or your first year flying — you probably have eUpgrade credits and no idea how to use them.</p>
+            <Link className="c3-link" to="/guide">Learn how eUpgrades work &rarr;</Link>
+          </div>
+          <div className="c3">
+            <div className="ic">&#9203;</div>
+            <h3>Credits about to expire?</h3>
+            <p>eUpgrade credits reset every year. If yours are sitting unused, see the fastest way to actually spend them before they're gone.</p>
+            <a className="c3-link" href="#calculator">Check a flight now &rarr;</a>
+          </div>
+          <div className="c3">
+            <div className="ic">&#127919;</div>
+            <h3>Know the mechanics, want the edge?</h3>
+            <p>You already understand credits and windows. What you want is which flights are actually worth booking.</p>
+            <a className="c3-link" href="#pricing">Get early access to predictions &rarr;</a>
+          </div>
+        </div>
+      </div></section>
+
       <section id="how"><div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">How it works</div>
-          <h2>One clear answer for any flight</h2>
+          <h2>How to actually use an Air Canada eUpgrade</h2>
           <p>Enter your flight and status. The calculator shows you exactly where you stand — for any Aeroplan tier, or no status at all on a Latitude fare.</p>
         </div>
         <div className="cards3">
-          <div className="c3"><div className="ic">&#9678;</div><h3>What it costs</h3><p>The exact number of eUpgrade credits your upgrade needs for that route and fare — plus any cash add-on Air Canada charges on top.</p></div>
-          <div className="c3"><div className="ic">&#9719;</div><h3>When you can request</h3><p>When your clearance window opens for your status, and the 36-hour cutoff before departure after which every request is waitlisted.</p></div>
-          <div className="c3"><div className="ic">&#9992;</div><h3>Works for everyone</h3><p>Every route, every fare brand, every Aeroplan status — including flyers with no status at all upgrading a Latitude fare.</p></div>
+          <div className="c3"><div className="ic">&#9678;</div><h3>What will it cost me?</h3><p>Every upgrade has a price in credits, sometimes plus a cash top-up. It depends on your route, your fare, and your status — this site calculates it exactly, for any combination, in seconds.</p></div>
+          <div className="c3"><div className="ic">&#9719;</div><h3>When can I actually request it?</h3><p>Your status decides when your request becomes eligible to clear — and there's a 36-hour cutoff before departure where everything gets decided at the gate instead. See your exact window before you book.</p></div>
+          <div className="c3"><div className="ic">&#9992;</div><h3>Does this work for me?</h3><p>Yes — every Aeroplan tier, including no status at all on a flexible fare. This isn't just for Super Elites.</p></div>
         </div>
       </div></section>
 
