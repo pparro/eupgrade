@@ -6,7 +6,10 @@
     --green:#0C9A6C; --green-deep:#097A54; --green-deeper:#075B3B; --green-bg:#E3F6EE;
     --copper:#B5652F; --copper-deep:#8F4B20; --copper-bg:#F7E7D9;
     --rose:#F0637E; --rose-deep:#C23A58; --rose-bg:#FDEDF0; --rose-line:#F6D3DB;
-    --r:20px; --shadow:0 18px 40px -22px rgba(40,42,38,.20);
+    --r:20px;
+    --shadow:0 10px 26px -18px rgba(40,42,38,.16);      /* subtle — secondary/explanatory cards */
+    --shadow-md:0 18px 40px -22px rgba(40,42,38,.20);   /* medium — inputs, pricing, signup */
+    --shadow-lg:0 34px 64px -28px rgba(40,42,38,.32);   /* pronounced — the calculator (primary task) */
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -41,9 +44,9 @@
   @media(max-width:720px){h1{font-size:38px}}
   .lede{color:var(--ink-2);font-size:18px;max-width:52ch;margin:0 auto}
 
-  .search{max-width:720px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:10px;text-align:left}
+  .search{max-width:720px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-md);padding:10px;text-align:left}
   .search-row{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:8px;align-items:end}
-  @media(max-width:680px){.search-row{grid-template-columns:1fr 1fr}}
+  @media(max-width:680px){.search-row{grid-template-columns:1fr}}
   .sf{padding:10px 14px}
   .sf .k{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:4px}
   .sf input,.sf select{width:100%;border:none;background:transparent;font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);padding:2px 0;outline:none;appearance:none}
@@ -66,7 +69,8 @@
   .c3 h3{font-weight:700;font-size:18px;margin:0 0 6px}
   .c3 p{color:var(--muted);font-size:14px;margin:0}
 
-  .board{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+  .board{position:relative;max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-lg);overflow:hidden}
+  .board::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);z-index:1}
   .board-head{padding:16px 22px;border-bottom:1px solid var(--line);font-weight:700;font-size:15px;display:flex;align-items:center;gap:9px}
   .board-head .free{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep);background:var(--green-bg);border-radius:999px;padding:4px 10px;font-weight:700}
   .board-body{padding:20px 22px}
@@ -110,10 +114,10 @@
   .toggle .save{color:var(--green-deep);font-family:"JetBrains Mono",monospace;font-size:10px;margin-left:5px;font-weight:700}
   .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:28px auto 0}
   @media(max-width:720px){.plans{grid-template-columns:1fr}}
-  .plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;box-shadow:var(--shadow)}
-  .plan.pro{border-color:var(--copper);box-shadow:0 0 0 2px rgba(181,101,47,.20),var(--shadow)}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;box-shadow:var(--shadow-md)}
+  .plan.pro{border-color:var(--copper);box-shadow:0 0 0 2px rgba(181,101,47,.20),var(--shadow-md)}
   .plan.pro .price{color:var(--copper-deep)}
-  .plan .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--copper);color:#fff;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;font-weight:700}
+  .plan .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--copper-deep);color:#fff;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;font-weight:700}
   .plan h3{font-weight:800;font-size:19px;margin:0 0 4px}
   .plan .price{font-weight:800;font-size:44px;line-height:1;margin:12px 0 2px;letter-spacing:-.02em}
   .plan .price small{font-size:16px;color:var(--muted);font-weight:600}
@@ -167,7 +171,7 @@
 .soon-inner h2{font-weight:800;font-size:28px;letter-spacing:-.02em;margin:10px 0 8px}
 @media(max-width:720px){.soon-inner h2{font-size:24px}}
 .soon-inner p{color:var(--ink-2);font-size:16px;margin:0 auto 22px;max-width:52ch}
-.notify{display:flex;gap:8px;max-width:420px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow)}
+.notify{display:flex;gap:8px;max-width:420px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow-md)}
 .notify input{flex:1;min-width:0;border:none;background:transparent;font-family:inherit;font-size:15px;font-weight:600;color:var(--ink);padding:8px 10px;outline:none}
 .notify button{border:none;background:var(--green-deep);color:#fff;border-radius:10px;padding:10px 18px;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(9,122,84,.6)}
 .notify-done{font-size:15px;font-weight:600;color:var(--ink-2);display:inline-flex;align-items:center;gap:8px;justify-content:center}
@@ -265,6 +269,8 @@
   .toggle button{min-height:44px}
   .nav-cta{display:inline-flex;align-items:center;min-height:44px}
   .foot-links a{padding:6px 0}
+  .expand-all,.faq-search .fs-clear{min-height:44px}
+  .faq-q{min-height:52px}
 }
 
 /* ── Timeline on phones: the pinned labels crowd a short track, so swap them
@@ -355,3 +361,18 @@
 .faq-a ul,.faq-a ol{margin:8px 0;padding-left:22px}
 .faq-a li{margin-bottom:7px}
 .faq-a strong,.faq-a b{color:var(--ink);font-weight:700}
+
+/* ── keyboard focus-visible rings on every interactive element (a11y) ──
+   The compound selectors carry enough specificity to override the
+   `outline:none` resets on the hero, signup and FAQ-search fields. ── */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+.search-row .sf select:focus-visible,
+.sf select:focus-visible,
+.notify input:focus-visible,
+.faq-search input:focus-visible{
+  outline:2px solid var(--green-deep);
+  outline-offset:2px;
+}
