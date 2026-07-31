@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import Logo from "./components/Logo.jsx";
 import { ROUTES, routeSlug } from "./routes-data.js";
+import { routeSeo } from "./seo.js";
+import { useHead } from "./use-head.js";
 import { RULES, FARES, band } from "./rules.js";
 import { distanceMiles, zoneFor, airport } from "./airports.js";
 
@@ -89,19 +91,7 @@ function NotFound({ slug }) {
 export default function RoutePage() {
   const { slug } = useParams();
   const data = ROUTES[slug];
-
-  useEffect(() => {
-    if (!data) return;
-    const prevTitle = document.title;
-    const meta = document.querySelector('meta[name="description"]');
-    const prevDesc = meta ? meta.content : null;
-    document.title = `${data.origin.city} to ${data.dest.city} eUpgrade Guide — Air Canada Clearance Rules | eupgrade.me`;
-    if (meta) meta.content = `How Air Canada eUpgrade works on ${data.origin.city}–${data.dest.city} flights: cabin config, eUpgrade credit cost, fare classes, and clearance priority.`;
-    return () => {
-      document.title = prevTitle;
-      if (meta && prevDesc != null) meta.content = prevDesc;
-    };
-  }, [data]);
+  useHead(useMemo(() => (data ? routeSeo(data) : null), [data]));
 
   if (!data) return <NotFound slug={slug} />;
 

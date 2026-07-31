@@ -1,6 +1,8 @@
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { quote, windowInfo, TIERS, FARES, CLASSES } from "../rules.js";
 import { AIRPORTS, distanceMiles, zoneFor, airport } from "../airports.js";
+import { ROUTES, routeSlug } from "../routes-data.js";
 import Timeline from "./Timeline.jsx";
 
 const AP_OPTIONS = AIRPORTS.map((a) => (
@@ -28,6 +30,7 @@ export default function Calculator({ trip, setTrip }) {
 
   const A = airport(trip.from), B = airport(trip.to);
   const sameAirport = trip.from === trip.to;
+  const routeGuide = ROUTES[routeSlug(trip.from, trip.to)];
 
   return (
     <div className="board" id="calculator">
@@ -91,6 +94,11 @@ export default function Calculator({ trip, setTrip }) {
               <div className="note"><span>&#9873;</span><div>
                 <b>{win.txt}</b> Anything inside 36 hours of departure is waitlisted regardless of open seats, and settled at the gate once check-in closes.
               </div></div>
+              {routeGuide && (
+                <Link className="route-guide-link" to={`/routes/${routeGuide.slug}`}>
+                  <span>&#128220;</span> Read the full {A.code}&rarr;{B.code} eUpgrade route guide &rarr;
+                </Link>
+              )}
             </>
           )}
         </div>

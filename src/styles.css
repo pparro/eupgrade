@@ -104,6 +104,8 @@
   .mk.dep .t{background:var(--green)}.mk.wall .t{background:var(--rose)}
   .note{font-size:12.5px;color:var(--ink-2);margin-top:12px;display:flex;gap:8px;align-items:flex-start}
   .note b{font-weight:700}
+  .route-guide-link{display:flex;align-items:center;gap:8px;margin-top:16px;background:var(--green-bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;font-weight:700;color:var(--green-deep);transition:border-color .15s}
+  .route-guide-link:hover{border-color:var(--green);color:var(--green)}
   .locked{margin-top:16px;background:linear-gradient(120deg,var(--green-bg),var(--bg-2));border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center}
   .locked .lk{font-size:20px}
   .locked .h{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px}

@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import { marked } from "marked";
 import Logo from "./components/Logo.jsx";
+import { useHead } from "./use-head.js";
+import { PAGE_SEO } from "./seo.js";
 import { FAQ_CATEGORIES, normalize } from "./faq.js";
 
 marked.setOptions({ mangle: false, headerIds: false });
@@ -45,6 +47,7 @@ function FaqItem({ item, forceOpen }) {
 }
 
 export default function Faq() {
+  useHead(PAGE_SEO["/faq"]);
   const [q, setQ] = useState("");
   const [allOpen, setAllOpen] = useState(false);
   const query = normalize(q);

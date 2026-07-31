@@ -1,5 +1,7 @@
 import { useState, useMemo } from "react";
 import Logo from "./components/Logo.jsx";
+import { useHead } from "./use-head.js";
+import { PAGE_SEO } from "./seo.js";
 import { RULES, TIERS, FARES, isLat } from "./rules.js";
 
 /* The window numbers and fare list come straight from rules.js so this guide
@@ -95,6 +97,7 @@ function Explainer() {
 }
 
 export default function Guide() {
+  useHead(PAGE_SEO["/guide"]);
   return (
     <div className="guide">
       <nav><div className="wrap">
