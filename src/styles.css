@@ -378,3 +378,35 @@ input:focus-visible,
   outline:2px solid var(--green-deep);
   outline-offset:2px;
 }
+
+/* ── /routes/:slug — per-route eUpgrade guide ── */
+.routepage{line-height:1.62}
+.routepage header{position:static;overflow:visible;padding:52px 0 6px;text-align:left}
+.routepage header::before,.routepage header::after{content:none}
+.routepage h1{font-weight:800;font-size:36px;line-height:1.08;letter-spacing:-.025em;margin:12px 0 12px;max-width:22ch}
+@media(max-width:640px){.routepage h1{font-size:27px}}
+.routepage h1 .g{color:var(--green)}
+.route-stats{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14.5px;color:var(--ink-2);margin:0}
+.route-stats b{color:var(--ink);font-weight:700}
+.routepage .back{font-size:14px;color:var(--ink-2);font-weight:600}
+.routepage .back:hover{color:var(--slate)}
+.routepage .prose a:not(.c3-link){color:var(--green-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.routepage .prose a:not(.c3-link):hover{color:var(--green)}
+.routepage .prose ul,.routepage .prose ol{margin:10px 0 16px;padding-left:22px;font-size:16.5px;color:var(--ink-2)}
+.routepage .prose li{margin-bottom:8px}
+.routepage .prose li b{color:var(--ink);font-weight:700}
+.route-fine{font-size:13.5px!important;color:var(--muted)!important}
+.route-links{list-style:none!important;padding-left:0!important;display:grid;gap:9px;margin:10px 0 4px}
+.route-links a{color:var(--green-deep);font-weight:700;font-size:15.5px;text-decoration:none}
+.route-links a:hover{color:var(--green)}
+
+.route-table-wrap{margin:16px 0 10px;overflow-x:auto}
+.route-table-wrap h3{font-weight:700;font-size:16px;margin:0 0 8px;color:var(--ink)}
+.route-table{width:100%;min-width:520px;border-collapse:collapse;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.route-table th,.route-table td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+.route-table th{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--bg)}
+.route-table tr:last-child td{border-bottom:none}
+.route-table td b{color:var(--green-deep);font-weight:800}
+.route-table .mono{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+.routepage footer{text-align:left;background:#fff}
+.routepage .disc{max-width:72ch}
