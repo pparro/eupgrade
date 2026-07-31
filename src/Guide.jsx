@@ -140,6 +140,7 @@ export default function Guide() {
           <div className="costitem"><span className="ci">💺</span><b>Which cabin</b> you're moving up to</div>
         </div>
         <p>It ranges from a <b>single credit</b> on a short hop to <b>twenty or more</b> on a long international flight. Cheaper fares can also add a small <b>cash top-up</b>. Rather than work it out by hand, let the calculator do it — that's what it's for.</p>
+        <p>One hard rule worth knowing up front: <b>Basic fares can't be upgraded at all</b>, no matter your status. Standard, Comfort, Flex, and Latitude fares can — the calculator flags it the moment you pick a fare that can't.</p>
 
         <h2><span className="n">04</span>The catch nobody tells you</h2>
         <p>Here's what trips everyone up: <strong>spending credits doesn't guarantee the seat.</strong></p>
@@ -154,6 +155,8 @@ export default function Guide() {
           <div className="rung"><span className="rn">4</span><div><b>When you checked in</b> — the final tiebreaker when everything above is equal.</div></div>
         </div>
         <p>So two people with the exact same status can still rank differently based on their fare and check-in time. That's why the same flight is a near-lock for one person and a long shot for another.</p>
+        <div className="analogy"><span className="tag">The bucket behind "if there's room"</span>
+          Even with top status, you only clear if Air Canada has an open <b>upgrade seat in its reservation system</b> — tracked through fare "buckets," usually <b>R-class</b> for Business and <b>N-class</b> for Premium Economy. As a flight fills, those buckets close. A closed bucket doesn't always mean the cabin is physically full — Air Canada may simply have capped how many upgrades it's willing to clear. It's why a high-demand route like <a href="/routes/yyz-lhr">Toronto–London</a> can close early. Worth knowing this is widely reported by flyers, not something Air Canada publishes.</div>
         <p>The other half of the puzzle is <b>timing</b> — when your request is even allowed to clear. That's the part called <b>clearance windows</b>, and it's the most misunderstood piece of all. Let's make it obvious.</p>
 
         <h2><span className="n">05</span>Clearance windows, made visual</h2>
@@ -163,12 +166,32 @@ export default function Guide() {
 
         <Explainer />
 
+        <div className="analogy"><span className="tag">Can't you just tell me the odds?</span>
+          Honestly — not yet. Reading live fare-bucket availability is exactly what predicts clearance, and it's what we're building into a real odds tool from actual flight data. Until it has enough history to stand behind a number, we show you the rules and your window, not a guess — no invented percentages. <a href="/#predictor">Get notified when predictions go live →</a></div>
+
         <h2><span className="n">06</span>So you're on the list. Now what?</h2>
         <p>If your upgrade hasn't cleared in advance, everything comes down to one moment: <b>the airport</b>.</p>
         <p>Check-in closes <b>60 minutes before departure</b> (that's now the same for domestic and international flights). About <b>five minutes after that — roughly 55 minutes before departure — Air Canada runs the upgrade list</b>. It works down the ranking from earlier: cabin, then status, then fare, then check-in time. If a seat is still open when it reaches your name, you're in.</p>
         <div className="analogy"><span className="tag">The one habit that helps</span>
           Since check-in time is the final tiebreaker, <b>checking in right at the 24-hour mark</b> can quietly move you ahead of people who left it late. It's the one lever you actually control.</div>
         <p>Two things worth knowing for that final stretch. If you clear an upgrade to Business at the gate, the Premium Economy seat you were sitting in opens up — so people waiting for PY can clear right behind you. And once you physically board the plane, you generally drop off the list. There's a saying for it among frequent flyers: <b>"you board, you lose."</b> If you're still hoping, it's usually worth waiting near the gate until your name is called rather than boarding early.</p>
+
+        <h2><span className="n">07</span>eUpgrade vs. paying for an upgrade</h2>
+        <p>eUpgrade is one of three ways to move up front on Air Canada. The other two cost cash but come with more certainty:</p>
+        <div className="route-table-wrap">
+          <table className="route-table">
+            <thead><tr><th></th><th>eUpgrade</th><th>Buy-on-Board</th><th>Instant Upgrade</th></tr></thead>
+            <tbody>
+              <tr><td><b>Cost</b></td><td>eUpgrade credits (no cash; sometimes a small add-on)</td><td>Cash, at booking or check-in</td><td>Cash, usually pricier</td></tr>
+              <tr><td><b>Needs status</b></td><td>Yes — Aeroplan Elite</td><td>No</td><td>No</td></tr>
+              <tr><td><b>Confirmed right away</b></td><td>No — waitlisted</td><td>Sometimes</td><td>Yes</td></tr>
+              <tr><td><b>Best for</b></td><td>Elite members with credits to spend</td><td>A shot at a seat without status</td><td>Certainty, if you'll pay for it</td></tr>
+              <tr><td><b>Risk</b></td><td>May not clear</td><td>May not be offered</td><td>None — confirmed on purchase</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>If you have status and some flexibility, eUpgrade is the free option worth trying first. If you need a guaranteed seat on a specific flight, Instant Upgrade is the only one of the three that confirms the moment you pay.</p>
+        <p>Still have questions? The full <a href="/faq">eUpgrade FAQ</a> covers costs and add-ons, credit expiry, upgrading companions, partner airlines, and the edge cases that trip people up.</p>
 
         <div className="recap">
           <div className="eyebrow" style={{ marginBottom: 10 }}>The whole thing in five lines</div>

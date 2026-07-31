@@ -14,9 +14,9 @@ export const PAGE_SEO = {
       "See what an eUpgrade costs, when your window opens, and whether it's worth using your credits — free, for any route and status.",
   },
   "/guide": {
-    title: "How Air Canada eUpgrades Work — A Plain-Language Guide | eupgrade.me",
+    title: "How Air Canada eUpgrades Work: Cost, Clearance & Priority (2026 Guide) | eupgrade.me",
     description:
-      "How Air Canada eUpgrades actually work: where credits come from, what an upgrade costs, when your clearance window opens, and how the upgrade list is ranked. No jargon.",
+      "How Air Canada eUpgrades work in plain language: where credits come from, what an upgrade costs, when your clearance window opens, how the upgrade list is ranked, and how eUpgrade compares to paid upgrades.",
     ogTitle: "Air Canada eUpgrades, explained simply",
     ogDescription:
       "Where credits come from, what upgrades cost, and how clearance windows and the upgrade list really work.",

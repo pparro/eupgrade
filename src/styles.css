@@ -205,6 +205,8 @@
 .analogy{background:linear-gradient(120deg,var(--green-bg),var(--copper-bg));border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:8px 0 4px;font-size:16px;color:var(--ink-2)}
 .analogy .tag{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--copper-deep);font-weight:700;display:block;margin-bottom:6px}
 .analogy b{color:var(--ink)}
+.guide .prose p a,.analogy a{color:var(--green-deep);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.guide .prose p a:hover,.analogy a:hover{color:var(--green)}
 .fine{font-size:14px!important;color:var(--muted)!important;margin-top:-6px!important}
 
 .costgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 14px}
