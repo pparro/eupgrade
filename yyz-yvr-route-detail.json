@@ -1,0 +1,3350 @@
+{
+  "AC033": {
+    "segments": [
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-09-29",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-30",
+        "effectiveEnd": "2027-02-28",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "77L",
+      "789"
+    ],
+    "primaryAircraft": "77L",
+    "anyWidebody": true,
+    "allWidebody": true,
+    "stability": "mostly_stable"
+  },
+  "AC101": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-18",
+        "effectiveEnd": "2026-08-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-26",
+        "effectiveEnd": "2026-08-27",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-28",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-02",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-12-01",
+        "effectiveEnd": "2026-12-31",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "789"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC103": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-03",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-17",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-15",
+        "effectiveEnd": "2026-08-23",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-27",
+        "effectiveEnd": "2026-08-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-03",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC105": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-12",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-13",
+        "effectiveEnd": "2026-08-20",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-16",
+        "effectiveEnd": "2026-08-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-21",
+        "effectiveEnd": "2026-08-29",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-08-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue",
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-26",
+        "effectiveEnd": "2026-09-01",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-30",
+        "effectiveEnd": "2026-08-30",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-31",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-13",
+        "effectiveEnd": "2026-09-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2026-10-25",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-26",
+        "effectiveEnd": "2027-02-28",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "77W",
+      "788",
+      "7M8"
+    ],
+    "primaryAircraft": "77W",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC107": {
+    "segments": [
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-12",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-13",
+        "effectiveEnd": "2026-08-13",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-14",
+        "effectiveEnd": "2026-09-07",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-12",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-16",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-17",
+        "effectiveEnd": "2026-10-24",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "321",
+      "77L",
+      "789"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC109": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-05",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-08",
+        "effectiveEnd": "2026-08-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-19",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-13",
+        "effectiveEnd": "2026-08-13",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-20",
+        "effectiveEnd": "2026-08-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-23",
+        "effectiveEnd": "2026-08-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-08-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-28",
+        "effectiveEnd": "2026-08-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-01",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-09-07",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-11",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-16",
+        "effectiveEnd": "2026-09-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-19",
+        "effectiveEnd": "2026-09-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-26",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "77W",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC111": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-07-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-05",
+        "effectiveEnd": "2026-08-05",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-07",
+        "effectiveEnd": "2026-08-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-08",
+        "effectiveEnd": "2026-08-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-13",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-14",
+        "effectiveEnd": "2026-08-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-23",
+        "effectiveEnd": "2026-08-23",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-08-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-30",
+        "effectiveEnd": "2026-08-30",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-03",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-09-04",
+        "effectiveEnd": "2026-09-04",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-05",
+        "effectiveEnd": "2026-09-05",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-12",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-09-11",
+        "effectiveEnd": "2026-09-18",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-19",
+        "effectiveEnd": "2026-09-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-22",
+        "effectiveEnd": "2026-09-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-24",
+        "effectiveEnd": "2026-10-01",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-28",
+        "effectiveEnd": "2026-09-30",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-02",
+        "effectiveEnd": "2027-01-01",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2027-01-02",
+        "effectiveEnd": "2027-01-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2027-01-03",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "789",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC113": {
+    "segments": [
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-02",
+        "effectiveEnd": "2026-08-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-07",
+        "effectiveEnd": "2026-08-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-08",
+        "effectiveEnd": "2026-08-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-09",
+        "effectiveEnd": "2026-08-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-10",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-14",
+        "effectiveEnd": "2026-08-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-16",
+        "effectiveEnd": "2026-08-26",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-22",
+        "effectiveEnd": "2026-08-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-27",
+        "effectiveEnd": "2026-09-03",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-28",
+        "effectiveEnd": "2026-08-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-04",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-06",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-11",
+        "effectiveEnd": "2026-09-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-17",
+        "effectiveEnd": "2026-09-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-09-28",
+        "effectiveEnd": "2026-09-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC115": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-10",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-07",
+        "effectiveEnd": "2026-08-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-11",
+        "effectiveEnd": "2026-08-23",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-08-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-26",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-07",
+        "effectiveEnd": "2026-09-10",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-11",
+        "effectiveEnd": "2026-09-19",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-20",
+        "effectiveEnd": "2026-09-20",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-21",
+        "effectiveEnd": "2026-09-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-23",
+        "effectiveEnd": "2026-09-30",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-27",
+        "effectiveEnd": "2026-09-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-09-29",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-01",
+        "effectiveEnd": "2026-11-21",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-11-22",
+        "effectiveEnd": "2026-11-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-11-23",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC117": {
+    "segments": [
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-07-31",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Tue",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-06",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-13",
+        "effectiveEnd": "2026-08-13",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-15",
+        "effectiveEnd": "2026-08-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-16",
+        "effectiveEnd": "2026-08-20",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-21",
+        "effectiveEnd": "2026-08-30",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-08-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-01",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "333",
+        "aircraftName": "Airbus A330-300",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-02",
+        "effectiveEnd": "2026-09-02",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-09-07",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-10-24",
+        "effectiveEnd": "2026-10-24",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2026-12-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2027-01-01",
+        "effectiveEnd": "2027-01-03",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2027-01-02",
+        "effectiveEnd": "2027-01-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2027-01-10",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "333",
+      "789",
+      "7M8"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC119": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-08-25",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-26",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-14",
+        "effectiveEnd": "2026-09-21",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-18",
+        "effectiveEnd": "2026-09-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-22",
+        "effectiveEnd": "2026-09-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-28",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2027-02-28",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "77W",
+      "789"
+    ],
+    "primaryAircraft": "77W",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC121": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-26",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-27",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-28",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Tue",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-12",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-16",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-09-14",
+        "effectiveEnd": "2026-09-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-15",
+        "effectiveEnd": "2026-09-15",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-17",
+        "effectiveEnd": "2026-09-21",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Fri"
+        ],
+        "effectiveStart": "2026-09-18",
+        "effectiveEnd": "2026-09-25",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-24",
+        "effectiveEnd": "2026-10-01",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Mon",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-26",
+        "effectiveEnd": "2026-09-28",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-09-29",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-30",
+        "effectiveEnd": "2026-10-07",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Tue",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-10-02",
+        "effectiveEnd": "2026-10-08",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-09",
+        "effectiveEnd": "2026-10-16",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2026-10-10",
+        "effectiveEnd": "2026-10-15",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-17",
+        "effectiveEnd": "2026-10-23",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-10-19",
+        "effectiveEnd": "2026-10-19",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "77L",
+      "77W",
+      "788",
+      "789"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC123": {
+    "segments": [
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-09-02",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-03",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-04",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-18",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-19",
+        "effectiveEnd": "2026-09-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-20",
+        "effectiveEnd": "2026-09-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-22",
+        "effectiveEnd": "2026-09-22",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "mostly_stable"
+  },
+  "AC125": {
+    "segments": [
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Wed",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-08-30",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-01",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-17",
+        "effectiveEnd": "2026-08-17",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-01",
+        "effectiveEnd": "2026-09-07",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-16",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-17",
+        "effectiveEnd": "2026-09-17",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-18",
+        "effectiveEnd": "2027-02-28",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "789"
+    ],
+    "primaryAircraft": "789",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC127": {
+    "segments": [
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-07-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue",
+          "Wed",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-03",
+        "effectiveEnd": "2026-08-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-14",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-15",
+        "effectiveEnd": "2026-08-26",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-27",
+        "effectiveEnd": "2026-08-27",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-28",
+        "effectiveEnd": "2026-08-28",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-29",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-09-14",
+        "effectiveEnd": "2026-09-14",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "7M8"
+    ],
+    "primaryAircraft": "223",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC129": {
+    "segments": [
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-07-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-08",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-05",
+        "effectiveEnd": "2026-08-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "effectiveStart": "2026-08-07",
+        "effectiveEnd": "2026-08-13",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-11",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-14",
+        "effectiveEnd": "2026-08-21",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-22",
+        "effectiveEnd": "2026-08-29",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-23",
+        "effectiveEnd": "2026-08-23",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Mon",
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-08-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-30",
+        "effectiveEnd": "2026-09-05",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-01",
+        "effectiveEnd": "2026-09-01",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-06",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-07",
+        "effectiveEnd": "2026-09-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed",
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-10",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-16",
+        "effectiveEnd": "2026-09-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-19",
+        "effectiveEnd": "2026-09-19",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-26",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-12-01",
+        "effectiveEnd": "2027-02-28",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321"
+    ],
+    "primaryAircraft": "321",
+    "anyWidebody": false,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC131": {
+    "segments": [
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2026-08-01",
+        "effectiveEnd": "2026-08-31",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-19",
+        "effectiveEnd": "2026-08-19",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-05",
+        "effectiveEnd": "2026-09-05",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-20",
+        "effectiveEnd": "2026-09-20",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "321",
+      "789"
+    ],
+    "primaryAircraft": "789",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC181": {
+    "segments": [
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-03",
+        "effectiveEnd": "2026-08-03",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "333",
+        "aircraftName": "Airbus A330-300",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-08",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-12",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-13",
+        "effectiveEnd": "2026-09-14",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-15",
+        "effectiveEnd": "2026-09-15",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-16",
+        "effectiveEnd": "2026-09-16",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-17",
+        "effectiveEnd": "2026-09-19",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Fri",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-18",
+        "effectiveEnd": "2026-09-22",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-23",
+        "effectiveEnd": "2026-09-23",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-24",
+        "effectiveEnd": "2026-09-24",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Mon",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-25",
+        "effectiveEnd": "2026-09-28",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-09-29",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-30",
+        "effectiveEnd": "2026-09-30",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-10-01",
+        "effectiveEnd": "2026-10-09",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-04",
+        "effectiveEnd": "2026-10-10",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Tue",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-11",
+        "effectiveEnd": "2026-10-17",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Wed",
+          "Thu",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-12",
+        "effectiveEnd": "2026-10-22",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-10-20",
+        "effectiveEnd": "2026-10-20",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Fri"
+        ],
+        "effectiveStart": "2026-10-23",
+        "effectiveEnd": "2026-10-23",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-10-24",
+        "effectiveEnd": "2026-10-24",
+        "widebody": false
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "333",
+      "77L",
+      "77W",
+      "788",
+      "789"
+    ],
+    "primaryAircraft": "788",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC183": {
+    "segments": [
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-02",
+        "effectiveEnd": "2026-08-17",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Tue",
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-18",
+        "effectiveEnd": "2026-08-23",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-08-24",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "7M8",
+        "aircraftName": "Boeing 737 MAX 8",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-08-25",
+        "effectiveEnd": "2026-08-25",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-26",
+        "effectiveEnd": "2026-08-26",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-08-30",
+        "effectiveEnd": "2026-09-06",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "320",
+        "aircraftName": "Airbus A320",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-31",
+        "effectiveEnd": "2026-08-31",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Mon",
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-01",
+        "effectiveEnd": "2026-09-07",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "223",
+        "aircraftName": "Airbus A220-300",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-09",
+        "effectiveEnd": "2026-09-09",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "321",
+        "aircraftName": "Airbus A321",
+        "daysOfWeek": [
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-10",
+        "effectiveEnd": "2026-09-12",
+        "widebody": false
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-23",
+        "effectiveEnd": "2026-09-23",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "223",
+      "320",
+      "321",
+      "789",
+      "7M8"
+    ],
+    "primaryAircraft": "7M8",
+    "anyWidebody": true,
+    "allWidebody": false,
+    "stability": "variable"
+  },
+  "AC185": {
+    "segments": [
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-07-31",
+        "effectiveEnd": "2026-09-07",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-08",
+        "effectiveEnd": "2026-09-15",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-16",
+        "effectiveEnd": "2026-09-22",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-24",
+        "effectiveEnd": "2026-10-05",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-06",
+        "effectiveEnd": "2026-10-24",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "effectiveStart": "2026-10-25",
+        "effectiveEnd": "2027-02-28",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "77W",
+      "789"
+    ],
+    "primaryAircraft": "789",
+    "anyWidebody": true,
+    "allWidebody": true,
+    "stability": "mostly_stable"
+  },
+  "AC187": {
+    "segments": [
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-03",
+        "effectiveEnd": "2026-08-03",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "333",
+        "aircraftName": "Airbus A330-300",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-08-05",
+        "effectiveEnd": "2026-08-26",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-10",
+        "effectiveEnd": "2026-08-10",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon",
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-17",
+        "effectiveEnd": "2026-08-20",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-08-24",
+        "effectiveEnd": "2026-08-24",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-08-27",
+        "effectiveEnd": "2026-08-27",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "333",
+        "aircraftName": "Airbus A330-300",
+        "daysOfWeek": [
+          "Thu"
+        ],
+        "effectiveStart": "2026-09-03",
+        "effectiveEnd": "2026-09-03",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "333",
+        "aircraftName": "Airbus A330-300",
+        "daysOfWeek": [
+          "Sat"
+        ],
+        "effectiveStart": "2026-09-05",
+        "effectiveEnd": "2026-09-05",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Sun"
+        ],
+        "effectiveStart": "2026-09-13",
+        "effectiveEnd": "2026-09-13",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77L",
+        "aircraftName": "Boeing 777-200LR",
+        "daysOfWeek": [
+          "Wed"
+        ],
+        "effectiveStart": "2026-09-23",
+        "effectiveEnd": "2026-09-23",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "77W",
+        "aircraftName": "Boeing 777-300ER",
+        "daysOfWeek": [
+          "Tue"
+        ],
+        "effectiveStart": "2026-09-29",
+        "effectiveEnd": "2026-09-29",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "789",
+        "aircraftName": "Boeing 787-9",
+        "daysOfWeek": [
+          "Mon"
+        ],
+        "effectiveStart": "2026-11-30",
+        "effectiveEnd": "2026-11-30",
+        "widebody": true
+      },
+      {
+        "aircraftCode": "788",
+        "aircraftName": "Boeing 787-8",
+        "daysOfWeek": [
+          "Mon",
+          "Thu",
+          "Sat"
+        ],
+        "effectiveStart": "2027-01-18",
+        "effectiveEnd": "2027-02-27",
+        "widebody": true
+      }
+    ],
+    "distinctAircraft": [
+      "333",
+      "77L",
+      "77W",
+      "788",
+      "789"
+    ],
+    "primaryAircraft": "788",
+    "anyWidebody": true,
+    "allWidebody": true,
+    "stability": "variable"
+  }
+}
