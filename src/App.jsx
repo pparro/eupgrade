@@ -3,15 +3,9 @@ import { Link } from "react-router-dom";
 import Logo from "./components/Logo.jsx";
 import Calculator from "./components/Calculator.jsx";
 import Pricing from "./components/Pricing.jsx";
-import { AIRPORTS } from "./airports.js";
-import { TIERS } from "./rules.js";
 import { subscribeEmail } from "./notify.js";
 
-const AP_OPTIONS = AIRPORTS.map((a) => (
-  <option key={a.code} value={a.code}>{a.code} · {a.city}</option>
-));
-
-function NotifyForm() {
+function NotifyForm({ cta = "Get early access" }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // idle | submitting | done | error
   const [error, setError] = useState("");
@@ -29,7 +23,7 @@ function NotifyForm() {
       setStatus("error");
       setError(
         err.code === "not-configured"
-          ? "Sign-ups aren't open just yet — check back soon."
+          ? "Early access isn't open just yet — check back soon."
           : "Something went wrong. Please try again."
       );
     }
@@ -38,7 +32,7 @@ function NotifyForm() {
   if (status === "done") {
     return (
       <div className="notify-done" role="status">
-        <span className="ok">&#10003;</span> Thanks — we'll email you when predictions go live.
+        <span className="ok">&#10003;</span> You're on the list — we'll email you the moment the forecast goes live.
       </div>
     );
   }
@@ -59,7 +53,7 @@ function NotifyForm() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <button type="submit" disabled={busy || !email.trim()}>
-          {busy ? "Adding you…" : "Notify me"}
+          {busy ? "Adding you…" : cta}
         </button>
       </form>
       {status === "error" && <p className="notify-error" role="alert">{error}</p>}
@@ -72,120 +66,105 @@ export default function App() {
     from: "YYZ", to: "NRT", status: "SUPER_ELITE",
     cabin: "J", fare: "Y_FLEX", cls: "V", purchase: "CASH",
   });
-  const set = (k, v) => setTrip((s) => ({ ...s, [k]: v }));
-
-  const scrollToCalc = () => {
-    document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
 
   return (
     <>
       <nav><div className="wrap">
         <div className="brand"><Logo /><span className="word">eupgrade<span className="me">.me</span></span></div>
         <div className="nav-links">
-          <Link to="/guide">Guide</Link>
-          <Link to="/faq">FAQ</Link>
-          <a href="#how">How it works</a>
+          <a href="#predictions">Predictions</a>
           <a href="#calculator">Calculator</a>
+          <Link to="/guide">Guide</Link>
           <a href="#pricing">Pricing</a>
-          <a className="nav-cta" href="#calculator">Check a flight</a>
+          <a className="nav-cta" href="#early-access">Get early access</a>
         </div>
       </div></nav>
 
       <main>
-      <header><div className="wrap">
-        <div className="pill rise d1"><span className="d"></span> A free eUpgrade tool for Aeroplan flyers</div>
-        <h1 className="hero-h1 rise d2">Stop letting your Air Canada <span className="g">eUpgrades</span> go to waste.</h1>
-        <p className="lede rise d2">Free tool for using your Air Canada eUpgrades — see what an upgrade costs, when it can clear, and the best flights to spend your credits on before they expire.</p>
+        <header id="predictions"><div className="wrap">
+          <div className="pill rise d1"><span className="d"></span> Prediction model — in development</div>
+          <h1 className="hero-h1 rise d2">See how likely your upgrade is <span className="g">to clear.</span></h1>
+          <p className="lede rise d2">We got tired of guessing whether an eUpgrade would clear — so we're building the forecast Air Canada never gave us.</p>
+          <p className="hero-tertiary rise d3">It'll weigh seat inventory, historical clearance patterns, and more. It's not live yet — join the early-access list and we'll tell you the moment it is.</p>
+          <div className="hero-cta rise d3"><NotifyForm /></div>
+          <a className="ghost-link rise d4" href="#calculator">Or try the free calculator &rarr;</a>
+        </div></header>
 
-        <div className="search rise d3">
-          <div className="search-row">
-            <label className="sf br"><div className="k">From</div>
-              <select aria-label="From airport" value={trip.from} onChange={(e) => set("from", e.target.value)}>{AP_OPTIONS}</select></label>
-            <label className="sf br"><div className="k">To</div>
-              <select aria-label="To airport" value={trip.to} onChange={(e) => set("to", e.target.value)}>{AP_OPTIONS}</select></label>
-            <label className="sf"><div className="k">Your status</div>
-              <select aria-label="Your Aeroplan status" value={trip.status} onChange={(e) => set("status", e.target.value)}>
-                {TIERS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
-            <button className="go" onClick={scrollToCalc}>Check &rarr;</button>
+        <section id="how"><div className="wrap">
+          <div className="sec-head">
+            <div className="eyebrow">How the forecast will work</div>
+            <h2>Two ways to find your upgrade's chances</h2>
+            <p>Both are part of the prediction model we're building. Live today: the free calculator further down gives you the exact cost and clearance window.</p>
           </div>
-        </div>
-        <div className="helper rise d4">
-          <span><span className="ok">&#10003;</span> No sign-up to check</span>
-          <span><span className="ok">&#10003;</span> Free — every route &amp; status</span>
-          <span><span className="ok">&#10003;</span> Independent — not Air Canada</span>
-        </div>
-      </div></header>
-
-      <section id="triage"><div className="wrap">
-        <div className="sec-head">
-          <div className="eyebrow">Which one's you?</div>
-        </div>
-        <div className="cards3">
-          <div className="c3">
-            <div className="ic">&#127381;</div>
-            <h3>New to Air Canada status?</h3>
-            <p>If you just got Aeroplan status — from a card, a status match, or your first year flying — you probably have eUpgrade credits and no idea how to use them.</p>
-            <Link className="c3-link" to="/guide">Learn how eUpgrades work &rarr;</Link>
+          <div className="paths">
+            <div className="path">
+              <div className="path-top"><span className="ic">&#128197;</span><span className="soon-tag">Coming soon</span></div>
+              <h3>Explore a route</h3>
+              <p>Flexible on dates? Enter a route like Toronto &rarr; London and see upcoming dates colour-coded by clearance probability — so you can book, or shift your trip toward, the best ones.</p>
+            </div>
+            <div className="path">
+              <div className="path-top"><span className="ic">&#127919;</span><span className="soon-tag">Coming soon</span></div>
+              <h3>Check a specific flight</h3>
+              <p>Already booked? Enter your flight, status, and cabin for a full probability breakdown of that exact upgrade.</p>
+            </div>
           </div>
-          <div className="c3">
-            <div className="ic">&#9203;</div>
-            <h3>Credits about to expire?</h3>
-            <p>eUpgrade credits reset every year. If yours are sitting unused, see the fastest way to actually spend them before they're gone.</p>
-            <a className="c3-link" href="#calculator">Check a flight now &rarr;</a>
+        </div></section>
+
+        <section><div className="wrap">
+          <div className="sec-head">
+            <div className="eyebrow">Free today</div>
+            <h2>The eUpgrade calculator</h2>
+            <p>While the forecast is in the works, this is live and free — the exact credit cost, any cash add-on, and your clearance window for any Air Canada flight.</p>
           </div>
-          <div className="c3">
-            <div className="ic">&#127919;</div>
-            <h3>Know the mechanics, want the edge?</h3>
-            <p>You already understand credits and windows. What you want is which flights are actually worth booking.</p>
-            <a className="c3-link" href="#pricing">Get early access to predictions &rarr;</a>
+          <div style={{ marginTop: 30 }}><Calculator trip={trip} setTrip={setTrip} /></div>
+        </div></section>
+
+        <section id="features"><div className="wrap">
+          <div className="sec-head"><div className="eyebrow">What you get</div><h2>Free forever — Pro when the forecast lands</h2></div>
+          <div className="feat-hero">
+            <div className="feat-tag pro">Pro · Coming soon</div>
+            <h3>Flight-specific probability forecast</h3>
+            <p>The heart of it: a clear, honest probability that your exact upgrade clears — built from real flight data once we've logged enough of it. This is what the whole model is for.</p>
           </div>
-        </div>
-      </div></section>
+          <div className="feat-grid">
+            <div className="feat"><span className="feat-live">&#10003; Live</span><b>Credit cost calculator</b><span>Exact credits and cash add-on for any route, fare, and status.</span></div>
+            <div className="feat"><span className="feat-live">&#10003; Live</span><b>Clearance window guide</b><span>When your request can clear, and the 36-hour cutoff.</span></div>
+            <div className="feat"><span className="feat-live">&#10003; Live</span><b>Per-route guides</b><span>Cabin config, cost, and priority for specific routes.</span></div>
+            <div className="feat"><span className="feat-tag">Free · Soon</span><b>Route explorer</b><span>A calendar of dates, colour-coded by clearance probability.</span></div>
+            <div className="feat"><span className="feat-tag pro">Pro · Soon</span><b>Window-opening alerts</b><span>A ping the moment your upgrade window opens.</span></div>
+            <div className="feat"><span className="feat-tag pro">Pro · Soon</span><b>Route comparison</b><span>Every flight on a route, sortable by clearance probability.</span></div>
+          </div>
+        </div></section>
 
-      <section id="how"><div className="wrap">
-        <div className="sec-head">
-          <div className="eyebrow">How it works</div>
-          <h2>How to actually use an Air Canada eUpgrade</h2>
-          <p>Enter your flight and status. The calculator shows you exactly where you stand — for any Aeroplan tier, or no status at all on a Latitude fare.</p>
-        </div>
-        <div className="cards3">
-          <div className="c3"><div className="ic">&#9678;</div><h3>What will it cost me?</h3><p>Every upgrade has a price in credits, sometimes plus a cash top-up. It depends on your route, your fare, and your status — this site calculates it exactly, for any combination, in seconds.</p></div>
-          <div className="c3"><div className="ic">&#9719;</div><h3>When can I actually request it?</h3><p>Your status decides when your request becomes eligible to clear — and there's a 36-hour cutoff before departure where everything gets decided at the gate instead. See your exact window before you book.</p></div>
-          <div className="c3"><div className="ic">&#9992;</div><h3>Does this work for me?</h3><p>Yes — every Aeroplan tier, including no status at all on a flexible fare. This isn't just for Super Elites.</p></div>
-        </div>
-      </div></section>
+        <Pricing />
 
-      <section style={{ paddingTop: 8 }}><div className="wrap"><Calculator trip={trip} setTrip={setTrip} /></div></section>
+        <section><div className="wrap">
+          <div className="sec-head"><div className="eyebrow">Before you ask</div><h2>Good to know</h2></div>
+          <div className="faq">
+            <div><div className="q">How accurate is the prediction?</div><div className="a">We can't say yet — the model is still in development. We'll publish validated accuracy from real flights before it ever sits behind a paywall. No numbers until they're real.</div></div>
+            <div><div className="q">Is this affiliated with Air Canada?</div><div className="a">No — it's an independent tool built by a frequent flyer. Costs come from Air Canada's published charts. Always confirm in the AC app before you travel.</div></div>
+            <div><div className="q">Do you sell my data?</div><div className="a">No. We don't sell your data. The only thing we collect right now is an email address, and only if you choose to join the early-access list.</div></div>
+            <div><div className="q">What's the difference between Free and Pro?</div><div className="a">The calculator and guides are free forever. Pro will add the flight-specific forecast, window-opening alerts, and route comparison once the model is live.</div></div>
+          </div>
+          <div style={{ textAlign: "center", marginTop: 26 }}>
+            <Link className="guide-link" to="/faq">More questions? See the full FAQ &rarr;</Link>
+          </div>
+        </div></section>
 
-      <Pricing />
-
-      <section><div className="wrap">
-        <div className="sec-head"><div className="eyebrow">Straight answers</div><h2>Good to know</h2></div>
-        <div className="faq">
-          <div><div className="q">Do you tell me if my upgrade will clear?</div><div className="a">Not yet — that's what we're building. The calculator gives you the cost and timing today; clearance predictions from real flight data are coming soon, and you can sign up below to hear when they land.</div></div>
-          <div><div className="q">Is this affiliated with Air Canada?</div><div className="a">No — it's an independent tool built by a frequent flyer. Costs come from Air Canada's published charts. Always confirm in the AC app before you travel.</div></div>
-          <div><div className="q">Is it really free?</div><div className="a">Yes. The calculator is free for any route, fare and status, with no sign-up. Pro is optional and only adds planning tools on top.</div></div>
-          <div><div className="q">What does Pro add?</div><div className="a">It tracks your credit balance and expiry, alerts you the moment a flight's request window opens, and points you at the best-value flights to burn credits on before they reset.</div></div>
-        </div>
-        <div style={{ textAlign: "center", marginTop: 26 }}>
-          <Link className="guide-link" to="/faq">See all eUpgrade questions &amp; answers &rarr;</Link>
-        </div>
-      </div></section>
-
-      <section id="predictor" className="soon-band"><div className="wrap">
-        <div className="soon-inner">
-          <div className="eyebrow">Coming soon</div>
-          <h2>Coming soon: will it actually clear?</h2>
-          <p>We're building upgrade-clearance predictions from real flight data — so you'll know your odds before you commit a credit. Want to know when it's ready?</p>
-          <NotifyForm />
-        </div>
-      </div></section>
+        <section id="early-access" className="soon-band"><div className="wrap">
+          <div className="soon-inner">
+            <div className="eyebrow">Early access</div>
+            <h2>Be first to know if your upgrade will clear</h2>
+            <p>Get early access to the prediction model — or use the free calculator right now.</p>
+            <NotifyForm />
+            <a className="ghost-link" href="#calculator" style={{ marginTop: 18 }}>Open the calculator &rarr;</a>
+          </div>
+        </div></section>
       </main>
 
       <footer><div className="wrap">
-        <div className="disc"><b style={{ color: "var(--ink-2)" }}>eupgrade<span style={{ color: "var(--muted)" }}>.me</span></b> is an independent tool and is not affiliated with, endorsed by, or sponsored by Air Canada or Aeroplan. "Air Canada", "Aeroplan" and "eUpgrade" are trademarks of their respective owners, referenced only to describe the program this tool helps you navigate. Likelihood estimates are just that — estimates. Always confirm details in the Air Canada app before travelling.</div>
-        <div className="foot-links"><a href="#calculator">Calculator</a><a href="#pricing">Pricing</a><a href="#how">How it works</a></div>
+        <div className="disc"><b style={{ color: "var(--ink-2)" }}>eupgrade<span style={{ color: "var(--muted)" }}>.me</span></b> is an independent tool and is not affiliated with, endorsed by, or sponsored by Air Canada or Aeroplan. "Air Canada", "Aeroplan" and "eUpgrade" are trademarks of their respective owners, referenced only to describe the program this tool helps you navigate. The prediction model is in development; the calculator reflects Air Canada's published charts — always confirm details in the Air Canada app before travelling.</div>
+        <div className="foot-links"><a href="#calculator">Calculator</a><Link to="/guide">Guide</Link><Link to="/faq">FAQ</Link><a href="#pricing">Pricing</a></div>
       </div></footer>
     </>
   );

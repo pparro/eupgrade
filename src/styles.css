@@ -414,3 +414,35 @@ input:focus-visible,
 .route-table .mono{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--ink-2)}
 .routepage footer{text-align:left;background:#fff}
 .routepage .disc{max-width:72ch}
+
+/* ── homepage: predictions-first restructure ── */
+.hero-tertiary{color:var(--muted);font-size:14.5px;max-width:54ch;margin:14px auto 0;line-height:1.55}
+.hero-cta{margin:26px auto 0;max-width:420px}
+.ghost-link{display:inline-block;margin-top:16px;font-size:14px;font-weight:700;color:var(--ink-2);transition:color .15s}
+.ghost-link:hover{color:var(--green-deep)}
+
+/* two-path "how the forecast will work" */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+@media(max-width:760px){.paths{grid-template-columns:1fr}}
+.path{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.path-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.path-top .ic{font-size:26px;line-height:1}
+.path h3{font-weight:700;font-size:19px;margin:0 0 8px}
+.path p{color:var(--muted);font-size:14.5px;margin:0;line-height:1.55}
+.soon-tag{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--copper-deep);background:var(--copper-bg);border-radius:999px;padding:4px 10px;white-space:nowrap}
+
+/* features: highlighted forecast card + tiered grid */
+.feat-hero{text-align:center;background:linear-gradient(135deg,var(--green-bg),var(--copper-bg));border:1px solid var(--copper);border-radius:var(--r);padding:30px 28px;box-shadow:0 0 0 2px rgba(181,101,47,.15),var(--shadow-md);margin-top:36px}
+.feat-hero .feat-tag{display:inline-block;margin-bottom:12px}
+.feat-hero h3{font-weight:800;font-size:24px;letter-spacing:-.02em;margin:0 0 8px}
+.feat-hero p{color:var(--ink-2);font-size:15.5px;max-width:58ch;margin:0 auto;line-height:1.55}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+@media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.feat-grid{grid-template-columns:1fr}}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px}
+.feat b{font-size:15px;color:var(--ink);font-weight:700}
+.feat>span:last-child{font-size:13px;color:var(--muted);line-height:1.5}
+.feat-live,.feat-tag{align-self:flex-start;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:3px 9px;margin-bottom:2px}
+.feat-live{color:var(--green-deep);background:var(--green-bg)}
+.feat-tag{color:var(--ink-2);background:var(--bg-2)}
+.feat-tag.pro{color:var(--copper-deep);background:var(--copper-bg)}
