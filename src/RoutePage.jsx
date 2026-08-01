@@ -27,7 +27,7 @@ function NotFound({ slug }) {
         <div className="cta" style={{ marginTop: 28 }}>
           <h3>Check this route now</h3>
           <p>See the exact eUpgrade cost and clearance window for any flight.</p>
-          <a href="/#calculator">Open the calculator →</a>
+          <a href={o && d ? `/?from=${oc}&to=${dc}#calculator` : "/#calculator"}>Open the calculator →</a>
         </div>
         <p style={{ marginTop: 24 }}><Link className="c3-link" to="/guide">Read the full eUpgrade guide →</Link></p>
       </div></main>
@@ -46,6 +46,7 @@ export default function RoutePage() {
   const pair = `${O.code}–${D.code}`;
   const miles = distanceMiles(O.code, D.code);
   const zone = zoneFor(O.code, D.code);
+  const calcHref = `/?from=${O.code}&to=${D.code}#calculator`;
   const hasPE = data.cabins ? data.cabins.premiumEconomy != null : !!data.hasPremiumEconomy;
   const flightCount = data.flights
     ? data.flights.always.length + data.flights.sometimes.length + data.flights.narrow.length
@@ -118,7 +119,7 @@ export default function RoutePage() {
           <h2>What it costs to eUpgrade on {pair}</h2>
           <CostTable zone={zone} miles={miles} cabin="J" title="Upgrade to Business" />
           {hasPE && <CostTable zone={zone} miles={miles} cabin="PY" title="Upgrade to Premium Economy" />}
-          <p className="route-fine">Costs shown are Air Canada's published eUpgrade credit rates for this cabin distance band ({ZONE_LABEL[zone]}) — they apply the same way across every route in this distance tier, not just {pair}. Exact cost depends on your specific booking class; the <Link to="/#calculator">calculator</Link> works it out for your trip.</p>
+          <p className="route-fine">Costs shown are Air Canada's published eUpgrade credit rates for this cabin distance band ({ZONE_LABEL[zone]}) — they apply the same way across every route in this distance tier, not just {pair}. Exact cost depends on your specific booking class; the <a href={calcHref}>calculator</a> works it out for your trip.</p>
 
           <h2>Clearance priority on this route</h2>
           <p>Like every eUpgrade request, priority on {pair} is set by:</p>

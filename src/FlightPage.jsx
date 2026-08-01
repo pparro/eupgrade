@@ -46,6 +46,7 @@ export default function FlightPage() {
   const zone = zoneFor(O.code, D.code);
   // Representative clearance window (50K, Economy Flex) — it shifts with status.
   const win = windowInfo("K50", zone, "Y_FLEX");
+  const calcHref = `/?from=${O.code}&to=${D.code}#calculator`;
 
   return (
     <div className="routepage">
@@ -82,12 +83,12 @@ export default function FlightPage() {
           <h2>What an eUpgrade costs on {data.flight}</h2>
           <CostTable zone={zone} miles={miles} cabin="J" title="Upgrade to Business" />
           {data.hasPremiumEconomy && <CostTable zone={zone} miles={miles} cabin="PY" title="Upgrade to Premium Economy" />}
-          <p className="route-fine">Costs are Air Canada's published eUpgrade credit rates for this cabin distance band ({ZONE_LABEL[zone]}) — the same across every {pair}-tier route. Exact cost depends on your booking class; the <Link to="/#calculator">calculator</Link> works it out for your trip.</p>
+          <p className="route-fine">Costs are Air Canada's published eUpgrade credit rates for this cabin distance band ({ZONE_LABEL[zone]}) — the same across every {pair}-tier route. Exact cost depends on your booking class; the <a href={calcHref}>calculator</a> works it out for your trip.</p>
 
           <h2>When your request can clear</h2>
           <p>Your status sets how early your request becomes eligible. Here's the window for a <b>50K</b> flyer on an <b>Economy Flex</b> fare — it slides earlier with higher status, and there's a hard 36-hour cutoff before departure after which everything is settled at the gate:</p>
           <Timeline days={win.days} any={win.any} />
-          <p className="route-fine">Window shifts with your status and fare. See the <Link to="/guide">full clearance-window guide</Link>, or run your exact trip through the <Link to="/#calculator">calculator</Link>.</p>
+          <p className="route-fine">Window shifts with your status and fare. See the <Link to="/guide">full clearance-window guide</Link>, or run your exact trip through the <a href={calcHref}>calculator</a>.</p>
 
           <h2>Real clearance predictions — in testing</h2>
           <p>Whether {data.flight} actually clears on a given date depends on live fare-bucket availability, which the published charts can't tell you. We're building that into a clearance-probability model from real flight data — it's in testing, and we won't show a number until it's validated.</p>

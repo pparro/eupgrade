@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./components/Logo.jsx";
 import Calculator from "./components/Calculator.jsx";
 import Pricing from "./components/Pricing.jsx";
 import { subscribeEmail } from "./notify.js";
+import { airport } from "./airports.js";
+
+const BASE_TRIP = {
+  from: "YYZ", to: "NRT", status: "SUPER_ELITE",
+  cabin: "J", fare: "Y_FLEX", cls: "V", purchase: "CASH",
+};
+
+// Pre-fill the calculator from ?from=YYZ&to=YVR when arriving from a route or
+// flight page. Only accept codes that are real airports so a bad link falls
+// back to the defaults rather than breaking the calculator.
+function initialTrip() {
+  if (typeof window === "undefined") return BASE_TRIP;
+  const q = new URLSearchParams(window.location.search);
+  const from = (q.get("from") || "").toUpperCase();
+  const to = (q.get("to") || "").toUpperCase();
+  return {
+    ...BASE_TRIP,
+    from: airport(from) ? from : BASE_TRIP.from,
+    to: airport(to) ? to : BASE_TRIP.to,
+  };
+}
 
 function NotifyForm({ cta = "Get early access" }) {
   const [email, setEmail] = useState("");
@@ -62,10 +83,15 @@ function NotifyForm({ cta = "Get early access" }) {
 }
 
 export default function App() {
-  const [trip, setTrip] = useState({
-    from: "YYZ", to: "NRT", status: "SUPER_ELITE",
-    cabin: "J", fare: "Y_FLEX", cls: "V", purchase: "CASH",
-  });
+  const [trip, setTrip] = useState(initialTrip);
+
+  // Scroll to the calculator after render when linked with #calculator (the
+  // browser's native hash scroll can fire before React paints the section).
+  useEffect(() => {
+    if (window.location.hash !== "#calculator") return;
+    const el = document.getElementById("calculator");
+    if (el) requestAnimationFrame(() => el.scrollIntoView({ block: "start" }));
+  }, []);
 
   return (
     <>
