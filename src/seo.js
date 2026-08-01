@@ -39,3 +39,11 @@ export function routeSeo(r) {
     description: `How Air Canada eUpgrade works on ${pair} flights: cabin config, eUpgrade credit cost, fare classes, and clearance priority.`,
   };
 }
+
+// Per-flight SEO, derived from a flight-data object (used by FlightPage + prerender).
+export function flightSeo(f) {
+  return {
+    title: `Air Canada ${f.flight}: ${f.origin.city} to ${f.dest.city} eUpgrade Guide | eupgrade.me`,
+    description: `Air Canada ${f.flight} (${f.origin.code}–${f.dest.code}): aircraft, cabins, what an eUpgrade costs in credits, and how clearance works on this ${f.origin.city}–${f.dest.city} flight.`,
+  };
+}

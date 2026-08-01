@@ -446,3 +446,20 @@ input:focus-visible,
 .feat-live{color:var(--green-deep);background:var(--green-bg)}
 .feat-tag{color:var(--ink-2);background:var(--bg-2)}
 .feat-tag.pro{color:var(--copper-deep);background:var(--copper-bg)}
+
+/* ── flight / route example pages: disclaimer + flight list ── */
+.ex-note{display:flex;gap:10px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:6px 0 10px;font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.ex-note b{color:var(--ink);font-weight:700}
+.ex-note i{font-style:italic}
+.ex-ico{color:var(--green-deep);font-size:16px;flex:none;line-height:1.4}
+
+.flight-groups{display:flex;flex-direction:column;gap:14px;margin:16px 0 8px}
+.flight-group{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.fg-head{font-size:13.5px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fg-tag{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.fg-tag.wide{color:var(--green-deep);background:var(--green-bg)}
+.fg-tag.wide-soft{color:var(--copper-deep);background:var(--copper-bg)}
+.fg-tag.narrow{color:var(--ink-2);background:var(--bg-2)}
+.flight-chips{display:flex;flex-wrap:wrap;gap:8px}
+.flight-chip{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;color:var(--green-deep);background:var(--green-bg);border:1px solid transparent;border-radius:9px;padding:6px 11px;text-decoration:none;transition:border-color .15s,color .15s}
+.flight-chip:hover{border-color:var(--green);color:var(--green)}

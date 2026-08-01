@@ -1,65 +1,12 @@
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import Logo from "./components/Logo.jsx";
-import { ROUTES, routeSlug } from "./routes-data.js";
+import CostTable, { ZONE_LABEL } from "./components/CostTable.jsx";
+import ExampleNote from "./components/ExampleNote.jsx";
+import { ROUTES, routeSlug, flightSlug } from "./routes-data.js";
 import { routeSeo } from "./seo.js";
 import { useHead } from "./use-head.js";
-import { RULES, FARES, band } from "./rules.js";
 import { distanceMiles, zoneFor, airport } from "./airports.js";
-
-const FARE_LABEL = Object.fromEntries(FARES);
-const ZONE_LABEL = { NA_SUN: "North America / Sun", INTERNATIONAL: "International" };
-
-/* Live cost rows straight from the rules engine, so this page and the
-   calculator can never show different numbers for the same route + band. */
-function costRows(zone, miles, cabin, purchase = "CASH") {
-  const b = band(zone, miles);
-  const chart = RULES.charts[`${zone}|${cabin}|${purchase}`];
-  if (!b || !chart) return [];
-  return chart
-    .map(([fare, classes, cells]) => {
-      const cell = cells[b];
-      if (!cell) return null;
-      const [credits, addon = 0, isMin = false, seWaive = false] = cell;
-      return {
-        fare,
-        fareLabel: FARE_LABEL[fare] || fare,
-        classes: classes === "ALL" ? "All booking classes" : classes.join(", "),
-        credits,
-        addon,
-        isMin,
-        seWaive,
-      };
-    })
-    .filter(Boolean);
-}
-
-function CostTable({ zone, miles, cabin, title }) {
-  const rows = costRows(zone, miles, cabin);
-  if (!rows.length) return null;
-  const anyWaive = rows.some((r) => r.seWaive);
-  return (
-    <div className="route-table-wrap">
-      <h3>{title}</h3>
-      <table className="route-table">
-        <thead>
-          <tr><th>Fare brand</th><th>Booking classes</th><th>eUpgrade credits</th><th>Cash add-on</th></tr>
-        </thead>
-        <tbody>
-          {rows.map((r, i) => (
-            <tr key={i}>
-              <td>{r.fareLabel}</td>
-              <td className="mono">{r.classes}</td>
-              <td><b>{r.credits}</b></td>
-              <td>{r.addon > 0 ? `${r.isMin ? "from " : ""}$${r.addon}${r.seWaive ? "*" : ""}` : "$0"}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      {anyWaive && <p className="route-fine">* Cash add-on is waived for Super Elite members on international upgrades.</p>}
-    </div>
-  );
-}
 
 function NotFound({ slug }) {
   // Resolve an unbuilt slug (e.g. a related-route link) into a friendly page.
@@ -99,7 +46,10 @@ export default function RoutePage() {
   const pair = `${O.code}–${D.code}`;
   const miles = distanceMiles(O.code, D.code);
   const zone = zoneFor(O.code, D.code);
-  const hasPE = data.cabins.premiumEconomy != null;
+  const hasPE = data.cabins ? data.cabins.premiumEconomy != null : !!data.hasPremiumEconomy;
+  const flightCount = data.flights
+    ? data.flights.always.length + data.flights.sometimes.length + data.flights.narrow.length
+    : 0;
 
   return (
     <div className="routepage">
@@ -122,14 +72,48 @@ export default function RoutePage() {
         <div className="gwrap prose">
           <p>Flying from {O.city} to {D.city} on Air Canada and wondering about eUpgrade? Here's what applies on this specific route — cabin layout, which fares are eligible, what it costs in eUpgrade credits, and how clearance priority works. We're building a live clearance-odds tracker for {pair}; until we have enough flight history to back a real number, here's exactly how the rules apply.</p>
 
-          <h2>Cabin on this route</h2>
-          <p>The {data.aircraft.split(" / ")[0]} flying {pair} is typically configured with:</p>
-          <ul>
-            <li><b>{data.cabins.business}</b> Business Class seats</li>
-            {hasPE && <li><b>{data.cabins.premiumEconomy}</b> Premium Economy seats</li>}
-            <li><b>{data.cabins.economy}</b> Economy seats</li>
-          </ul>
-          <p className="route-fine">Route flown {data.frequency}.</p>
+          <ExampleNote />
+
+          {data.cabins && (
+            <>
+              <h2>Cabin on this route</h2>
+              <p>The {data.aircraft.split(" / ")[0]} flying {pair} is typically configured with:</p>
+              <ul>
+                <li><b>{data.cabins.business}</b> Business Class seats</li>
+                {hasPE && <li><b>{data.cabins.premiumEconomy}</b> Premium Economy seats</li>}
+                <li><b>{data.cabins.economy}</b> Economy seats</li>
+              </ul>
+              <p className="route-fine">Route flown {data.frequency}.</p>
+            </>
+          )}
+
+          {data.flights && (
+            <>
+              <h2>Flights on {pair}</h2>
+              <p>{O.city}–{D.city} is served by <b>{flightCount} flight numbers</b> a day, on everything from widebody Boeing 787s and 777s to narrowbody Airbus A321s and A220s. That aircraft mix is the whole eUpgrade story — only the widebody flights carry Premium Economy and a lie-flat Business cabin.</p>
+              <div className="flight-groups">
+                <div className="flight-group">
+                  <div className="fg-head"><span className="fg-tag wide">Always widebody</span> lie-flat Business + Premium Economy</div>
+                  <div className="flight-chips">
+                    {data.flights.always.map((f) => <Link key={f} className="flight-chip" to={`/flights/${flightSlug(f)}`}>{f}</Link>)}
+                  </div>
+                </div>
+                <div className="flight-group">
+                  <div className="fg-head"><span className="fg-tag wide-soft">Sometimes widebody</span> widebody on select dates — check the date</div>
+                  <div className="flight-chips">
+                    {data.flights.sometimes.map((f) => <Link key={f} className="flight-chip" to={`/flights/${flightSlug(f)}`}>{f}</Link>)}
+                  </div>
+                </div>
+                <div className="flight-group">
+                  <div className="fg-head"><span className="fg-tag narrow">Narrowbody</span> recliner Business, no Premium Economy</div>
+                  <div className="flight-chips">
+                    {data.flights.narrow.map((f) => <Link key={f} className="flight-chip" to={`/flights/${flightSlug(f)}`}>{f}</Link>)}
+                  </div>
+                </div>
+              </div>
+              <p className="route-fine">Flight numbers link to per-flight guides — we're publishing them one at a time, starting with <Link to="/flights/ac033">AC033</Link>, the daily widebody flagship. Aircraft assignments are a schedule snapshot and shift through the season.</p>
+            </>
+          )}
 
           <h2>What it costs to eUpgrade on {pair}</h2>
           <CostTable zone={zone} miles={miles} cabin="J" title="Upgrade to Business" />

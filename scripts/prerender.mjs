@@ -9,8 +9,9 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { SITE, PAGE_SEO, routeSeo } from "../src/seo.js";
+import { SITE, PAGE_SEO, routeSeo, flightSeo } from "../src/seo.js";
 import { ROUTES } from "../src/routes-data.js";
+import { FLIGHTS, flightSlug } from "../src/flights-data.js";
 
 const DIST = join(dirname(fileURLToPath(import.meta.url)), "..", "dist");
 const shell = readFileSync(join(DIST, "index.html"), "utf8");
@@ -56,6 +57,15 @@ for (const path of ["/", "/guide", "/faq"]) {
 for (const slug of Object.keys(ROUTES)) {
   const path = `/routes/${slug}`;
   write(path, headFor(path, routeSeo(ROUTES[slug])));
+  urls.push(path);
+  console.log("  ✓", path);
+}
+
+// Published flight pages.
+for (const key of Object.keys(FLIGHTS)) {
+  const f = FLIGHTS[key];
+  const path = `/flights/${flightSlug(f.flight)}`;
+  write(path, headFor(path, flightSeo(f)));
   urls.push(path);
   console.log("  ✓", path);
 }
