@@ -20,7 +20,7 @@ function NotFound({ slug }) {
       </div></nav>
       <main><div className="gwrap prose" style={{ textAlign: "center", paddingTop: 40 }}>
         <div className="eyebrow">Route guide</div>
-        <h1 style={{ margin: "10px 0 12px" }}>
+        <h1 style={{ margin: "10px auto 12px" }}>
           {o && d ? `${o.city} (${o.code}) → ${d.city} (${d.code})` : "This route"}
         </h1>
         <p>We haven't published a full guide for this route yet — it's on the list. In the meantime, the calculator works for every route, fare, and status.</p>

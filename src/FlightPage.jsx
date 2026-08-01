@@ -21,7 +21,7 @@ function NotFound({ flight }) {
       </div></nav>
       <main><div className="gwrap prose" style={{ textAlign: "center", paddingTop: 40 }}>
         <div className="eyebrow">Flight guide</div>
-        <h1 style={{ margin: "10px 0 12px" }}>Air Canada {flight || "flight"}</h1>
+        <h1 style={{ margin: "10px auto 12px" }}>Air Canada {flight || "flight"}</h1>
         <p>We haven't published a guide for this flight yet — it's on the list. In the meantime, the calculator gives you the exact eUpgrade cost and clearance window for any route, fare, and status.</p>
         <div className="cta" style={{ marginTop: 28 }}>
           <h3>Check your upgrade now</h3>
