@@ -20,6 +20,21 @@ export const FLIGHTS = {
     ],
     note: "Both aircraft on AC033 carry a lie-flat Business cabin and Premium Economy, which makes it one of the better eUpgrade targets on the Toronto–Vancouver route.",
   },
+
+  "ac185": {
+    flight: "AC185",
+    origin: { code: "YYZ", city: "Toronto" },
+    dest: { code: "YVR", city: "Vancouver" },
+    frequency: "daily",
+    widebody: true, // consistently widebody — no narrowbody segments
+    hasBusiness: true,
+    hasPremiumEconomy: true,
+    aircraftSchedule: [
+      { name: "Boeing 777-300ER", from: "31 Jul 2026", to: "24 Oct 2026" },
+      { name: "Boeing 787-9", from: "25 Oct 2026", to: "28 Feb 2027" },
+    ],
+    note: "Like AC033, AC185 stays widebody all season — both the 777-300ER and 787-9 carry a lie-flat Business cabin and Premium Economy, so the eUpgrade math is among the best on Toronto–Vancouver.",
+  },
 };
 
 export const flightSlug = (flightNumber) => flightNumber.toLowerCase();
